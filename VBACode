@@ -1,0 +1,4435 @@
+' Jason Schwartz
+' CINF 308 Midterm Project VBA Code
+
+' In short: The purpose of this program is hav:
+' 1 clear function to clear empty cells in the original table
+' 6 part one programs to back up cells with text to a new empty table
+' 6 part two programs to reimport the cells that weren't empty to the original table
+' Also, it is segmented into different functions so that it runs in the right order and doesn't break the debugger
+' That being stated, I will not put many comments in this code due to the lenth, the fact that it is VBA and not Python, and that it's just the output of the programs I already commented on.
+
+' This was not made with python but is needed to make the VBA run the way I wanted
+Sub Clear()
+    Sheets("Kalamein Shop").Range("H10:I58").Value = ""
+    Sheets("Kalamein Shop").Range("O10:P58").Value = ""
+    Sheets("Kalamein Shop").Range("V10:W58").Value = ""
+    Sheets("Kalamein Shop").Range("AC10:AD58").Value = ""
+    Sheets("Kalamein Shop").Range("AJ10:AK58").Value = ""
+    Sheets("Kalamein Shop").Range("AQ10:AR58").Value = ""
+    Sheets("Assembly").Range("I10:I59").Value = ""
+    Sheets("Assembly").Range("P10:P59").Value = ""
+    Sheets("Assembly").Range("W10:W59").Value = ""
+    Sheets("Assembly").Range("AD10:AD59").Value = ""
+    Sheets("Assembly").Range("AK10:AK59").Value = ""
+    Sheets("Assembly").Range("AR10:AR59").Value = ""
+    Sheets("Prehang").Range("I10:I59").Value = ""
+    Sheets("Prehang").Range("P10:P59").Value = ""
+    Sheets("Prehang").Range("W10:W59").Value = ""
+    Sheets("Prehang").Range("AD10:AD59").Value = ""
+    Sheets("Prehang").Range("AK10:AK59").Value = ""
+    Sheets("Prehang").Range("AR10:AR59").Value = ""
+
+End Sub
+Sub KeepWork25()
+
+' Everything under here is the result of the python programs I made.
+
+'1
+If Range("V11") = "" Then
+
+Range("EF75").Value = Sheets("Kalamein Shop").Range("H10")
+Range("EG75").Value = Sheets("Kalamein Shop").Range("I10")
+Range("FA75").Value = Sheets("Assembly").Range("I10")
+Range("FA76").Value = Sheets("Assembly").Range("I11")
+Range("FO75").Value = Sheets("Prehang").Range("I10")
+Range("FO76").Value = Sheets("Prehang").Range("I11")
+
+ElseIf Range("V11") <> "" Then
+
+Range("EF75").Value = ""
+Range("EG75").Value = ""
+Range("FA75").Value = ""
+Range("FA76").Value = ""
+Range("FO75").Value = ""
+Range("FO76").Value = ""
+
+End If
+
+'2
+If Range("V13") = "" Then
+
+Range("EF77").Value = Sheets("Kalamein Shop").Range("H12")
+Range("EG77").Value = Sheets("Kalamein Shop").Range("I12")
+Range("FA77").Value = Sheets("Assembly").Range("I12")
+Range("FA78").Value = Sheets("Assembly").Range("I13")
+Range("FO77").Value = Sheets("Prehang").Range("I12")
+Range("FO78").Value = Sheets("Prehang").Range("I13")
+
+ElseIf Range("V13") <> "" Then
+
+Range("EF77").Value = ""
+Range("EG77").Value = ""
+Range("FA77").Value = ""
+Range("FA78").Value = ""
+Range("FO77").Value = ""
+Range("FO78").Value = ""
+
+End If
+
+'3
+If Range("V15") = "" Then
+
+Range("EF79").Value = Sheets("Kalamein Shop").Range("H14")
+Range("EG79").Value = Sheets("Kalamein Shop").Range("I14")
+Range("FA79").Value = Sheets("Assembly").Range("I14")
+Range("FA80").Value = Sheets("Assembly").Range("I15")
+Range("FO79").Value = Sheets("Prehang").Range("I14")
+Range("FO80").Value = Sheets("Prehang").Range("I15")
+
+ElseIf Range("V15") <> "" Then
+
+Range("EF79").Value = ""
+Range("EG79").Value = ""
+Range("FA79").Value = ""
+Range("FA80").Value = ""
+Range("FO79").Value = ""
+Range("FO80").Value = ""
+
+End If
+
+'4
+If Range("V17") = "" Then
+
+Range("EF81").Value = Sheets("Kalamein Shop").Range("H16")
+Range("EG81").Value = Sheets("Kalamein Shop").Range("I16")
+Range("FA81").Value = Sheets("Assembly").Range("I16")
+Range("FA82").Value = Sheets("Assembly").Range("I17")
+Range("FO81").Value = Sheets("Prehang").Range("I16")
+Range("FO82").Value = Sheets("Prehang").Range("I17")
+
+ElseIf Range("V17") <> "" Then
+
+Range("EF81").Value = ""
+Range("EG81").Value = ""
+Range("FA81").Value = ""
+Range("FA82").Value = ""
+Range("FO81").Value = ""
+Range("FO82").Value = ""
+
+End If
+
+'5
+If Range("V19") = "" Then
+
+Range("EF83").Value = Sheets("Kalamein Shop").Range("H18")
+Range("EG83").Value = Sheets("Kalamein Shop").Range("I18")
+Range("FA83").Value = Sheets("Assembly").Range("I18")
+Range("FA84").Value = Sheets("Assembly").Range("I19")
+Range("FO83").Value = Sheets("Prehang").Range("I18")
+Range("FO84").Value = Sheets("Prehang").Range("I19")
+
+ElseIf Range("V19") <> "" Then
+
+Range("EF83").Value = ""
+Range("EG83").Value = ""
+Range("FA83").Value = ""
+Range("FA84").Value = ""
+Range("FO83").Value = ""
+Range("FO84").Value = ""
+
+End If
+
+'6
+If Range("V21") = "" Then
+
+Range("EF85").Value = Sheets("Kalamein Shop").Range("H20")
+Range("EG85").Value = Sheets("Kalamein Shop").Range("I20")
+Range("FA85").Value = Sheets("Assembly").Range("I20")
+Range("FA86").Value = Sheets("Assembly").Range("I21")
+Range("FO85").Value = Sheets("Prehang").Range("I20")
+Range("FO86").Value = Sheets("Prehang").Range("I21")
+
+ElseIf Range("V21") <> "" Then
+
+Range("EF85").Value = ""
+Range("EG85").Value = ""
+Range("FA85").Value = ""
+Range("FA86").Value = ""
+Range("FO85").Value = ""
+Range("FO86").Value = ""
+
+End If
+
+'7
+If Range("V23") = "" Then
+
+Range("EF87").Value = Sheets("Kalamein Shop").Range("H22")
+Range("EG87").Value = Sheets("Kalamein Shop").Range("I22")
+Range("FA87").Value = Sheets("Assembly").Range("I22")
+Range("FA88").Value = Sheets("Assembly").Range("I23")
+Range("FO87").Value = Sheets("Prehang").Range("I22")
+Range("FO88").Value = Sheets("Prehang").Range("I23")
+
+ElseIf Range("V23") <> "" Then
+
+Range("EF87").Value = ""
+Range("EG87").Value = ""
+Range("FA87").Value = ""
+Range("FA88").Value = ""
+Range("FO87").Value = ""
+Range("FO88").Value = ""
+
+End If
+
+'8
+If Range("V25") = "" Then
+
+Range("EF89").Value = Sheets("Kalamein Shop").Range("H24")
+Range("EG89").Value = Sheets("Kalamein Shop").Range("I24")
+Range("FA89").Value = Sheets("Assembly").Range("I24")
+Range("FA90").Value = Sheets("Assembly").Range("I25")
+Range("FO89").Value = Sheets("Prehang").Range("I24")
+Range("FO90").Value = Sheets("Prehang").Range("I25")
+
+ElseIf Range("V25") <> "" Then
+
+Range("EF89").Value = ""
+Range("EG89").Value = ""
+Range("FA89").Value = ""
+Range("FA90").Value = ""
+Range("FO89").Value = ""
+Range("FO90").Value = ""
+
+End If
+
+'9
+If Range("V27") = "" Then
+
+Range("EF91").Value = Sheets("Kalamein Shop").Range("H26")
+Range("EG91").Value = Sheets("Kalamein Shop").Range("I26")
+Range("FA91").Value = Sheets("Assembly").Range("I26")
+Range("FA92").Value = Sheets("Assembly").Range("I27")
+Range("FO91").Value = Sheets("Prehang").Range("I26")
+Range("FO92").Value = Sheets("Prehang").Range("I27")
+
+ElseIf Range("V27") <> "" Then
+
+Range("EF91").Value = ""
+Range("EG91").Value = ""
+Range("FA91").Value = ""
+Range("FA92").Value = ""
+Range("FO91").Value = ""
+Range("FO92").Value = ""
+
+End If
+
+'10
+If Range("V29") = "" Then
+
+Range("EF93").Value = Sheets("Kalamein Shop").Range("H28")
+Range("EG93").Value = Sheets("Kalamein Shop").Range("I28")
+Range("FA93").Value = Sheets("Assembly").Range("I28")
+Range("FA94").Value = Sheets("Assembly").Range("I29")
+Range("FO93").Value = Sheets("Prehang").Range("I28")
+Range("FO94").Value = Sheets("Prehang").Range("I29")
+
+ElseIf Range("V29") <> "" Then
+
+Range("EF93").Value = ""
+Range("EG93").Value = ""
+Range("FA93").Value = ""
+Range("FA94").Value = ""
+Range("FO93").Value = ""
+Range("FO94").Value = ""
+
+End If
+
+'11
+If Range("V31") = "" Then
+
+Range("EF95").Value = Sheets("Kalamein Shop").Range("H30")
+Range("EG95").Value = Sheets("Kalamein Shop").Range("I30")
+Range("FA95").Value = Sheets("Assembly").Range("I30")
+Range("FA96").Value = Sheets("Assembly").Range("I31")
+Range("FO95").Value = Sheets("Prehang").Range("I30")
+Range("FO96").Value = Sheets("Prehang").Range("I31")
+
+ElseIf Range("V31") <> "" Then
+
+Range("EF95").Value = ""
+Range("EG95").Value = ""
+Range("FA95").Value = ""
+Range("FA96").Value = ""
+Range("FO95").Value = ""
+Range("FO96").Value = ""
+
+End If
+
+'12
+If Range("V33") = "" Then
+
+Range("EF97").Value = Sheets("Kalamein Shop").Range("H32")
+Range("EG97").Value = Sheets("Kalamein Shop").Range("I32")
+Range("FA97").Value = Sheets("Assembly").Range("I32")
+Range("FA98").Value = Sheets("Assembly").Range("I33")
+Range("FO97").Value = Sheets("Prehang").Range("I32")
+Range("FO98").Value = Sheets("Prehang").Range("I33")
+
+ElseIf Range("V33") <> "" Then
+
+Range("EF97").Value = ""
+Range("EG97").Value = ""
+Range("FA97").Value = ""
+Range("FA98").Value = ""
+Range("FO97").Value = ""
+Range("FO98").Value = ""
+
+End If
+
+'13
+If Range("V35") = "" Then
+
+Range("EF99").Value = Sheets("Kalamein Shop").Range("H34")
+Range("EG99").Value = Sheets("Kalamein Shop").Range("I34")
+Range("FA99").Value = Sheets("Assembly").Range("I34")
+Range("FA100").Value = Sheets("Assembly").Range("I35")
+Range("FO99").Value = Sheets("Prehang").Range("I34")
+Range("FO100").Value = Sheets("Prehang").Range("I35")
+
+ElseIf Range("V35") <> "" Then
+
+Range("EF99").Value = ""
+Range("EG99").Value = ""
+Range("FA99").Value = ""
+Range("FA100").Value = ""
+Range("FO99").Value = ""
+Range("FO100").Value = ""
+
+End If
+
+'14
+If Range("V37") = "" Then
+
+Range("EF101").Value = Sheets("Kalamein Shop").Range("H36")
+Range("EG101").Value = Sheets("Kalamein Shop").Range("I36")
+Range("FA101").Value = Sheets("Assembly").Range("I36")
+Range("FA102").Value = Sheets("Assembly").Range("I37")
+Range("FO101").Value = Sheets("Prehang").Range("I36")
+Range("FO102").Value = Sheets("Prehang").Range("I37")
+
+ElseIf Range("V37") <> "" Then
+
+Range("EF101").Value = ""
+Range("EG101").Value = ""
+Range("FA101").Value = ""
+Range("FA102").Value = ""
+Range("FO101").Value = ""
+Range("FO102").Value = ""
+
+End If
+
+'15
+If Range("V39") = "" Then
+
+Range("EF103").Value = Sheets("Kalamein Shop").Range("H38")
+Range("EG103").Value = Sheets("Kalamein Shop").Range("I38")
+Range("FA103").Value = Sheets("Assembly").Range("I38")
+Range("FA104").Value = Sheets("Assembly").Range("I39")
+Range("FO103").Value = Sheets("Prehang").Range("I38")
+Range("FO104").Value = Sheets("Prehang").Range("I39")
+
+ElseIf Range("V39") <> "" Then
+
+Range("EF103").Value = ""
+Range("EG103").Value = ""
+Range("FA103").Value = ""
+Range("FA104").Value = ""
+Range("FO103").Value = ""
+Range("FO104").Value = ""
+
+End If
+
+'16
+If Range("V41") = "" Then
+
+Range("EF105").Value = Sheets("Kalamein Shop").Range("H40")
+Range("EG105").Value = Sheets("Kalamein Shop").Range("I40")
+Range("FA105").Value = Sheets("Assembly").Range("I40")
+Range("FA106").Value = Sheets("Assembly").Range("I41")
+Range("FO105").Value = Sheets("Prehang").Range("I40")
+Range("FO106").Value = Sheets("Prehang").Range("I41")
+
+ElseIf Range("V41") <> "" Then
+
+Range("EF105").Value = ""
+Range("EG105").Value = ""
+Range("FA105").Value = ""
+Range("FA106").Value = ""
+Range("FO105").Value = ""
+Range("FO106").Value = ""
+
+End If
+
+'17
+If Range("V43") = "" Then
+
+Range("EF107").Value = Sheets("Kalamein Shop").Range("H42")
+Range("EG107").Value = Sheets("Kalamein Shop").Range("I42")
+Range("FA107").Value = Sheets("Assembly").Range("I42")
+Range("FA108").Value = Sheets("Assembly").Range("I43")
+Range("FO107").Value = Sheets("Prehang").Range("I42")
+Range("FO108").Value = Sheets("Prehang").Range("I43")
+
+ElseIf Range("V43") <> "" Then
+
+Range("EF107").Value = ""
+Range("EG107").Value = ""
+Range("FA107").Value = ""
+Range("FA108").Value = ""
+Range("FO107").Value = ""
+Range("FO108").Value = ""
+
+End If
+
+'18
+If Range("V45") = "" Then
+
+Range("EF109").Value = Sheets("Kalamein Shop").Range("H44")
+Range("EG109").Value = Sheets("Kalamein Shop").Range("I44")
+Range("FA109").Value = Sheets("Assembly").Range("I44")
+Range("FA110").Value = Sheets("Assembly").Range("I45")
+Range("FO109").Value = Sheets("Prehang").Range("I44")
+Range("FO110").Value = Sheets("Prehang").Range("I45")
+
+ElseIf Range("V45") <> "" Then
+
+Range("EF109").Value = ""
+Range("EG109").Value = ""
+Range("FA109").Value = ""
+Range("FA110").Value = ""
+Range("FO109").Value = ""
+Range("FO110").Value = ""
+
+End If
+
+'19
+If Range("V47") = "" Then
+
+Range("EF111").Value = Sheets("Kalamein Shop").Range("H46")
+Range("EG111").Value = Sheets("Kalamein Shop").Range("I46")
+Range("FA111").Value = Sheets("Assembly").Range("I46")
+Range("FA112").Value = Sheets("Assembly").Range("I47")
+Range("FO111").Value = Sheets("Prehang").Range("I46")
+Range("FO112").Value = Sheets("Prehang").Range("I47")
+
+ElseIf Range("V47") <> "" Then
+
+Range("EF111").Value = ""
+Range("EG111").Value = ""
+Range("FA111").Value = ""
+Range("FA112").Value = ""
+Range("FO111").Value = ""
+Range("FO112").Value = ""
+
+End If
+
+'20
+If Range("V49") = "" Then
+
+Range("EF113").Value = Sheets("Kalamein Shop").Range("H48")
+Range("EG113").Value = Sheets("Kalamein Shop").Range("I48")
+Range("FA113").Value = Sheets("Assembly").Range("I48")
+Range("FA114").Value = Sheets("Assembly").Range("I49")
+Range("FO113").Value = Sheets("Prehang").Range("I48")
+Range("FO114").Value = Sheets("Prehang").Range("I49")
+
+ElseIf Range("V49") <> "" Then
+
+Range("EF113").Value = ""
+Range("EG113").Value = ""
+Range("FA113").Value = ""
+Range("FA114").Value = ""
+Range("FO113").Value = ""
+Range("FO114").Value = ""
+
+End If
+
+'21
+If Range("V51") = "" Then
+
+Range("EF115").Value = Sheets("Kalamein Shop").Range("H50")
+Range("EG115").Value = Sheets("Kalamein Shop").Range("I50")
+Range("FA115").Value = Sheets("Assembly").Range("I50")
+Range("FA116").Value = Sheets("Assembly").Range("I51")
+Range("FO115").Value = Sheets("Prehang").Range("I50")
+Range("FO116").Value = Sheets("Prehang").Range("I51")
+
+ElseIf Range("V51") <> "" Then
+
+Range("EF115").Value = ""
+Range("EG115").Value = ""
+Range("FA115").Value = ""
+Range("FA116").Value = ""
+Range("FO115").Value = ""
+Range("FO116").Value = ""
+
+End If
+
+'22
+If Range("V53") = "" Then
+
+Range("EF117").Value = Sheets("Kalamein Shop").Range("H52")
+Range("EG117").Value = Sheets("Kalamein Shop").Range("I52")
+Range("FA117").Value = Sheets("Assembly").Range("I52")
+Range("FA118").Value = Sheets("Assembly").Range("I53")
+Range("FO117").Value = Sheets("Prehang").Range("I52")
+Range("FO118").Value = Sheets("Prehang").Range("I53")
+
+ElseIf Range("V53") <> "" Then
+
+Range("EF117").Value = ""
+Range("EG117").Value = ""
+Range("FA117").Value = ""
+Range("FA118").Value = ""
+Range("FO117").Value = ""
+Range("FO118").Value = ""
+
+End If
+
+'23
+If Range("V55") = "" Then
+
+Range("EF119").Value = Sheets("Kalamein Shop").Range("H54")
+Range("EG119").Value = Sheets("Kalamein Shop").Range("I54")
+Range("FA119").Value = Sheets("Assembly").Range("I54")
+Range("FA120").Value = Sheets("Assembly").Range("I55")
+Range("FO119").Value = Sheets("Prehang").Range("I54")
+Range("FO120").Value = Sheets("Prehang").Range("I55")
+
+ElseIf Range("V55") <> "" Then
+
+Range("EF119").Value = ""
+Range("EG119").Value = ""
+Range("FA119").Value = ""
+Range("FA120").Value = ""
+Range("FO119").Value = ""
+Range("FO120").Value = ""
+
+End If
+
+'24
+If Range("V57") = "" Then
+
+Range("EF121").Value = Sheets("Kalamein Shop").Range("H56")
+Range("EG121").Value = Sheets("Kalamein Shop").Range("I56")
+Range("FA121").Value = Sheets("Assembly").Range("I56")
+Range("FA122").Value = Sheets("Assembly").Range("I57")
+Range("FO121").Value = Sheets("Prehang").Range("I56")
+Range("FO122").Value = Sheets("Prehang").Range("I57")
+
+ElseIf Range("V57") <> "" Then
+
+Range("EF121").Value = ""
+Range("EG121").Value = ""
+Range("FA121").Value = ""
+Range("FA122").Value = ""
+Range("FO121").Value = ""
+Range("FO122").Value = ""
+
+End If
+
+'25
+If Range("V59") = "" Then
+
+Range("EF123").Value = Sheets("Kalamein Shop").Range("H58")
+Range("EG123").Value = Sheets("Kalamein Shop").Range("I58")
+Range("FA123").Value = Sheets("Assembly").Range("I58")
+Range("FA124").Value = Sheets("Assembly").Range("I59")
+Range("FO123").Value = Sheets("Prehang").Range("I58")
+Range("FO124").Value = Sheets("Prehang").Range("I59")
+
+ElseIf Range("V59") <> "" Then
+
+Range("EF123").Value = ""
+Range("EG123").Value = ""
+Range("FA123").Value = ""
+Range("FA124").Value = ""
+Range("FO123").Value = ""
+Range("FO124").Value = ""
+
+End If
+
+' If you are reading this, this was included to call parts of the code so it doesn't run all at once and break the debugger and so that it runs in the right order
+KeepWork50
+KeepWork75
+KeepWork100
+KeepWork125
+KeepWork150
+' This calls that clear function I was talking about at the top
+Clear
+KeepWork252
+KeepWork502
+KeepWork752
+KeepWork1002
+KeepWork1252
+KeepWork1502
+
+End Sub
+Sub KeepWork50()
+
+'26
+If Range("AQ11") = "" Then
+
+Range("EI75").Value = Sheets("Kalamein Shop").Range("O10")
+Range("EJ75").Value = Sheets("Kalamein Shop").Range("P10")
+Range("FC75").Value = Sheets("Assembly").Range("P10")
+Range("FC76").Value = Sheets("Assembly").Range("P11")
+Range("FQ75").Value = Sheets("Prehang").Range("P10")
+Range("FQ76").Value = Sheets("Prehang").Range("P11")
+
+ElseIf Range("AQ11") <> "" Then
+
+Range("EI75").Value = ""
+Range("EJ75").Value = ""
+Range("FC75").Value = ""
+Range("FC76").Value = ""
+Range("FQ75").Value = ""
+Range("FQ76").Value = ""
+
+End If
+
+'27
+If Range("AQ13") = "" Then
+
+Range("EI77").Value = Sheets("Kalamein Shop").Range("O12")
+Range("EJ77").Value = Sheets("Kalamein Shop").Range("P12")
+Range("FC77").Value = Sheets("Assembly").Range("P12")
+Range("FC78").Value = Sheets("Assembly").Range("P13")
+Range("FQ77").Value = Sheets("Prehang").Range("P12")
+Range("FQ78").Value = Sheets("Prehang").Range("P13")
+
+ElseIf Range("AQ13") <> "" Then
+
+Range("EI77").Value = ""
+Range("EJ77").Value = ""
+Range("FC77").Value = ""
+Range("FC78").Value = ""
+Range("FQ77").Value = ""
+Range("FQ78").Value = ""
+
+End If
+
+'28
+If Range("AQ15") = "" Then
+
+Range("EI79").Value = Sheets("Kalamein Shop").Range("O14")
+Range("EJ79").Value = Sheets("Kalamein Shop").Range("P14")
+Range("FC79").Value = Sheets("Assembly").Range("P14")
+Range("FC80").Value = Sheets("Assembly").Range("P15")
+Range("FQ79").Value = Sheets("Prehang").Range("P14")
+Range("FQ80").Value = Sheets("Prehang").Range("P15")
+
+ElseIf Range("AQ15") <> "" Then
+
+Range("EI79").Value = ""
+Range("EJ79").Value = ""
+Range("FC79").Value = ""
+Range("FC80").Value = ""
+Range("FQ79").Value = ""
+Range("FQ80").Value = ""
+
+End If
+
+'29
+If Range("AQ17") = "" Then
+
+Range("EI81").Value = Sheets("Kalamein Shop").Range("O16")
+Range("EJ81").Value = Sheets("Kalamein Shop").Range("P16")
+Range("FC81").Value = Sheets("Assembly").Range("P16")
+Range("FC82").Value = Sheets("Assembly").Range("P17")
+Range("FQ81").Value = Sheets("Prehang").Range("P16")
+Range("FQ82").Value = Sheets("Prehang").Range("P17")
+
+ElseIf Range("AQ17") <> "" Then
+
+Range("EI81").Value = ""
+Range("EJ81").Value = ""
+Range("FC81").Value = ""
+Range("FC82").Value = ""
+Range("FQ81").Value = ""
+Range("FQ82").Value = ""
+
+End If
+
+'30
+If Range("AQ19") = "" Then
+
+Range("EI83").Value = Sheets("Kalamein Shop").Range("O18")
+Range("EJ83").Value = Sheets("Kalamein Shop").Range("P18")
+Range("FC83").Value = Sheets("Assembly").Range("P18")
+Range("FC84").Value = Sheets("Assembly").Range("P19")
+Range("FQ83").Value = Sheets("Prehang").Range("P18")
+Range("FQ84").Value = Sheets("Prehang").Range("P19")
+
+ElseIf Range("AQ19") <> "" Then
+
+Range("EI83").Value = ""
+Range("EJ83").Value = ""
+Range("FC83").Value = ""
+Range("FC84").Value = ""
+Range("FQ83").Value = ""
+Range("FQ84").Value = ""
+
+End If
+
+'31
+If Range("AQ21") = "" Then
+
+Range("EI85").Value = Sheets("Kalamein Shop").Range("O20")
+Range("EJ85").Value = Sheets("Kalamein Shop").Range("P20")
+Range("FC85").Value = Sheets("Assembly").Range("P20")
+Range("FC86").Value = Sheets("Assembly").Range("P21")
+Range("FQ85").Value = Sheets("Prehang").Range("P20")
+Range("FQ86").Value = Sheets("Prehang").Range("P21")
+
+ElseIf Range("AQ21") <> "" Then
+
+Range("EI85").Value = ""
+Range("EJ85").Value = ""
+Range("FC85").Value = ""
+Range("FC86").Value = ""
+Range("FQ85").Value = ""
+Range("FQ86").Value = ""
+
+End If
+
+'32
+If Range("AQ23") = "" Then
+
+Range("EI87").Value = Sheets("Kalamein Shop").Range("O22")
+Range("EJ87").Value = Sheets("Kalamein Shop").Range("P22")
+Range("FC87").Value = Sheets("Assembly").Range("P22")
+Range("FC88").Value = Sheets("Assembly").Range("P23")
+Range("FQ87").Value = Sheets("Prehang").Range("P22")
+Range("FQ88").Value = Sheets("Prehang").Range("P23")
+
+ElseIf Range("AQ23") <> "" Then
+
+Range("EI87").Value = ""
+Range("EJ87").Value = ""
+Range("FC87").Value = ""
+Range("FC88").Value = ""
+Range("FQ87").Value = ""
+Range("FQ88").Value = ""
+
+End If
+
+'33
+If Range("AQ25") = "" Then
+
+Range("EI89").Value = Sheets("Kalamein Shop").Range("O24")
+Range("EJ89").Value = Sheets("Kalamein Shop").Range("P24")
+Range("FC89").Value = Sheets("Assembly").Range("P24")
+Range("FC90").Value = Sheets("Assembly").Range("P25")
+Range("FQ89").Value = Sheets("Prehang").Range("P24")
+Range("FQ90").Value = Sheets("Prehang").Range("P25")
+
+ElseIf Range("AQ25") <> "" Then
+
+Range("EI89").Value = ""
+Range("EJ89").Value = ""
+Range("FC89").Value = ""
+Range("FC90").Value = ""
+Range("FQ89").Value = ""
+Range("FQ90").Value = ""
+
+End If
+
+'34
+If Range("AQ27") = "" Then
+
+Range("EI91").Value = Sheets("Kalamein Shop").Range("O26")
+Range("EJ91").Value = Sheets("Kalamein Shop").Range("P26")
+Range("FC91").Value = Sheets("Assembly").Range("P26")
+Range("FC92").Value = Sheets("Assembly").Range("P27")
+Range("FQ91").Value = Sheets("Prehang").Range("P26")
+Range("FQ92").Value = Sheets("Prehang").Range("P27")
+
+ElseIf Range("AQ27") <> "" Then
+
+Range("EI91").Value = ""
+Range("EJ91").Value = ""
+Range("FC91").Value = ""
+Range("FC92").Value = ""
+Range("FQ91").Value = ""
+Range("FQ92").Value = ""
+
+End If
+
+'35
+If Range("AQ29") = "" Then
+
+Range("EI93").Value = Sheets("Kalamein Shop").Range("O28")
+Range("EJ93").Value = Sheets("Kalamein Shop").Range("P28")
+Range("FC93").Value = Sheets("Assembly").Range("P28")
+Range("FC94").Value = Sheets("Assembly").Range("P29")
+Range("FQ93").Value = Sheets("Prehang").Range("P28")
+Range("FQ94").Value = Sheets("Prehang").Range("P29")
+
+ElseIf Range("AQ29") <> "" Then
+
+Range("EI93").Value = ""
+Range("EJ93").Value = ""
+Range("FC93").Value = ""
+Range("FC94").Value = ""
+Range("FQ93").Value = ""
+Range("FQ94").Value = ""
+
+End If
+
+'36
+If Range("AQ31") = "" Then
+
+Range("EI95").Value = Sheets("Kalamein Shop").Range("O30")
+Range("EJ95").Value = Sheets("Kalamein Shop").Range("P30")
+Range("FC95").Value = Sheets("Assembly").Range("P30")
+Range("FC96").Value = Sheets("Assembly").Range("P31")
+Range("FQ95").Value = Sheets("Prehang").Range("P30")
+Range("FQ96").Value = Sheets("Prehang").Range("P31")
+
+ElseIf Range("AQ31") <> "" Then
+
+Range("EI95").Value = ""
+Range("EJ95").Value = ""
+Range("FC95").Value = ""
+Range("FC96").Value = ""
+Range("FQ95").Value = ""
+Range("FQ96").Value = ""
+
+End If
+
+'37
+If Range("AQ33") = "" Then
+
+Range("EI97").Value = Sheets("Kalamein Shop").Range("O32")
+Range("EJ97").Value = Sheets("Kalamein Shop").Range("P32")
+Range("FC97").Value = Sheets("Assembly").Range("P32")
+Range("FC98").Value = Sheets("Assembly").Range("P33")
+Range("FQ97").Value = Sheets("Prehang").Range("P32")
+Range("FQ98").Value = Sheets("Prehang").Range("P33")
+
+ElseIf Range("AQ33") <> "" Then
+
+Range("EI97").Value = ""
+Range("EJ97").Value = ""
+Range("FC97").Value = ""
+Range("FC98").Value = ""
+Range("FQ97").Value = ""
+Range("FQ98").Value = ""
+
+End If
+
+'38
+If Range("AQ35") = "" Then
+
+Range("EI99").Value = Sheets("Kalamein Shop").Range("O34")
+Range("EJ99").Value = Sheets("Kalamein Shop").Range("P34")
+Range("FC99").Value = Sheets("Assembly").Range("P34")
+Range("FC100").Value = Sheets("Assembly").Range("P35")
+Range("FQ99").Value = Sheets("Prehang").Range("P34")
+Range("FQ100").Value = Sheets("Prehang").Range("P35")
+
+ElseIf Range("AQ35") <> "" Then
+
+Range("EI99").Value = ""
+Range("EJ99").Value = ""
+Range("FC99").Value = ""
+Range("FC100").Value = ""
+Range("FQ99").Value = ""
+Range("FQ100").Value = ""
+
+End If
+
+'39
+If Range("AQ37") = "" Then
+
+Range("EI101").Value = Sheets("Kalamein Shop").Range("O36")
+Range("EJ101").Value = Sheets("Kalamein Shop").Range("P36")
+Range("FC101").Value = Sheets("Assembly").Range("P36")
+Range("FC102").Value = Sheets("Assembly").Range("P37")
+Range("FQ101").Value = Sheets("Prehang").Range("P36")
+Range("FQ102").Value = Sheets("Prehang").Range("P37")
+
+ElseIf Range("AQ37") <> "" Then
+
+Range("EI101").Value = ""
+Range("EJ101").Value = ""
+Range("FC101").Value = ""
+Range("FC102").Value = ""
+Range("FQ101").Value = ""
+Range("FQ102").Value = ""
+
+End If
+
+'40
+If Range("AQ39") = "" Then
+
+Range("EI103").Value = Sheets("Kalamein Shop").Range("O38")
+Range("EJ103").Value = Sheets("Kalamein Shop").Range("P38")
+Range("FC103").Value = Sheets("Assembly").Range("P38")
+Range("FC104").Value = Sheets("Assembly").Range("P39")
+Range("FQ103").Value = Sheets("Prehang").Range("P38")
+Range("FQ104").Value = Sheets("Prehang").Range("P39")
+
+ElseIf Range("AQ39") <> "" Then
+
+Range("EI103").Value = ""
+Range("EJ103").Value = ""
+Range("FC103").Value = ""
+Range("FC104").Value = ""
+Range("FQ103").Value = ""
+Range("FQ104").Value = ""
+
+End If
+
+'41
+If Range("AQ41") = "" Then
+
+Range("EI105").Value = Sheets("Kalamein Shop").Range("O40")
+Range("EJ105").Value = Sheets("Kalamein Shop").Range("P40")
+Range("FC105").Value = Sheets("Assembly").Range("P40")
+Range("FC106").Value = Sheets("Assembly").Range("P41")
+Range("FQ105").Value = Sheets("Prehang").Range("P40")
+Range("FQ106").Value = Sheets("Prehang").Range("P41")
+
+ElseIf Range("AQ41") <> "" Then
+
+Range("EI105").Value = ""
+Range("EJ105").Value = ""
+Range("FC105").Value = ""
+Range("FC106").Value = ""
+Range("FQ105").Value = ""
+Range("FQ106").Value = ""
+
+End If
+
+'42
+If Range("AQ43") = "" Then
+
+Range("EI107").Value = Sheets("Kalamein Shop").Range("O42")
+Range("EJ107").Value = Sheets("Kalamein Shop").Range("P42")
+Range("FC107").Value = Sheets("Assembly").Range("P42")
+Range("FC108").Value = Sheets("Assembly").Range("P43")
+Range("FQ107").Value = Sheets("Prehang").Range("P42")
+Range("FQ108").Value = Sheets("Prehang").Range("P43")
+
+ElseIf Range("AQ43") <> "" Then
+
+Range("EI107").Value = ""
+Range("EJ107").Value = ""
+Range("FC107").Value = ""
+Range("FC108").Value = ""
+Range("FQ107").Value = ""
+Range("FQ108").Value = ""
+
+End If
+
+'43
+If Range("AQ45") = "" Then
+
+Range("EI109").Value = Sheets("Kalamein Shop").Range("O44")
+Range("EJ109").Value = Sheets("Kalamein Shop").Range("P44")
+Range("FC109").Value = Sheets("Assembly").Range("P44")
+Range("FC110").Value = Sheets("Assembly").Range("P45")
+Range("FQ109").Value = Sheets("Prehang").Range("P44")
+Range("FQ110").Value = Sheets("Prehang").Range("P45")
+
+ElseIf Range("AQ45") <> "" Then
+
+Range("EI109").Value = ""
+Range("EJ109").Value = ""
+Range("FC109").Value = ""
+Range("FC110").Value = ""
+Range("FQ109").Value = ""
+Range("FQ110").Value = ""
+
+End If
+
+'44
+If Range("AQ47") = "" Then
+
+Range("EI111").Value = Sheets("Kalamein Shop").Range("O46")
+Range("EJ111").Value = Sheets("Kalamein Shop").Range("P46")
+Range("FC111").Value = Sheets("Assembly").Range("P46")
+Range("FC112").Value = Sheets("Assembly").Range("P47")
+Range("FQ111").Value = Sheets("Prehang").Range("P46")
+Range("FQ112").Value = Sheets("Prehang").Range("P47")
+
+ElseIf Range("AQ47") <> "" Then
+
+Range("EI111").Value = ""
+Range("EJ111").Value = ""
+Range("FC111").Value = ""
+Range("FC112").Value = ""
+Range("FQ111").Value = ""
+Range("FQ112").Value = ""
+
+End If
+
+'45
+If Range("AQ49") = "" Then
+
+Range("EI113").Value = Sheets("Kalamein Shop").Range("O48")
+Range("EJ113").Value = Sheets("Kalamein Shop").Range("P48")
+Range("FC113").Value = Sheets("Assembly").Range("P48")
+Range("FC114").Value = Sheets("Assembly").Range("P49")
+Range("FQ113").Value = Sheets("Prehang").Range("P48")
+Range("FQ114").Value = Sheets("Prehang").Range("P49")
+
+ElseIf Range("AQ49") <> "" Then
+
+Range("EI113").Value = ""
+Range("EJ113").Value = ""
+Range("FC113").Value = ""
+Range("FC114").Value = ""
+Range("FQ113").Value = ""
+Range("FQ114").Value = ""
+
+End If
+
+'46
+If Range("AQ51") = "" Then
+
+Range("EI115").Value = Sheets("Kalamein Shop").Range("O50")
+Range("EJ115").Value = Sheets("Kalamein Shop").Range("P50")
+Range("FC115").Value = Sheets("Assembly").Range("P50")
+Range("FC116").Value = Sheets("Assembly").Range("P51")
+Range("FQ115").Value = Sheets("Prehang").Range("P50")
+Range("FQ116").Value = Sheets("Prehang").Range("P51")
+
+ElseIf Range("AQ51") <> "" Then
+
+Range("EI115").Value = ""
+Range("EJ115").Value = ""
+Range("FC115").Value = ""
+Range("FC116").Value = ""
+Range("FQ115").Value = ""
+Range("FQ116").Value = ""
+
+End If
+
+'47
+If Range("AQ53") = "" Then
+
+Range("EI117").Value = Sheets("Kalamein Shop").Range("O52")
+Range("EJ117").Value = Sheets("Kalamein Shop").Range("P52")
+Range("FC117").Value = Sheets("Assembly").Range("P52")
+Range("FC118").Value = Sheets("Assembly").Range("P53")
+Range("FQ117").Value = Sheets("Prehang").Range("P52")
+Range("FQ118").Value = Sheets("Prehang").Range("P53")
+
+ElseIf Range("AQ53") <> "" Then
+
+Range("EI117").Value = ""
+Range("EJ117").Value = ""
+Range("FC117").Value = ""
+Range("FC118").Value = ""
+Range("FQ117").Value = ""
+Range("FQ118").Value = ""
+
+End If
+
+'48
+If Range("AQ55") = "" Then
+
+Range("EI119").Value = Sheets("Kalamein Shop").Range("O54")
+Range("EJ119").Value = Sheets("Kalamein Shop").Range("P54")
+Range("FC119").Value = Sheets("Assembly").Range("P54")
+Range("FC120").Value = Sheets("Assembly").Range("P55")
+Range("FQ119").Value = Sheets("Prehang").Range("P54")
+Range("FQ120").Value = Sheets("Prehang").Range("P55")
+
+ElseIf Range("AQ55") <> "" Then
+
+Range("EI119").Value = ""
+Range("EJ119").Value = ""
+Range("FC119").Value = ""
+Range("FC120").Value = ""
+Range("FQ119").Value = ""
+Range("FQ120").Value = ""
+
+End If
+
+'49
+If Range("AQ57") = "" Then
+
+Range("EI121").Value = Sheets("Kalamein Shop").Range("O56")
+Range("EJ121").Value = Sheets("Kalamein Shop").Range("P56")
+Range("FC121").Value = Sheets("Assembly").Range("P56")
+Range("FC122").Value = Sheets("Assembly").Range("P57")
+Range("FQ121").Value = Sheets("Prehang").Range("P56")
+Range("FQ122").Value = Sheets("Prehang").Range("P57")
+
+ElseIf Range("AQ57") <> "" Then
+
+Range("EI121").Value = ""
+Range("EJ121").Value = ""
+Range("FC121").Value = ""
+Range("FC122").Value = ""
+Range("FQ121").Value = ""
+Range("FQ122").Value = ""
+
+End If
+
+'50
+If Range("AQ59") = "" Then
+
+Range("EI123").Value = Sheets("Kalamein Shop").Range("O58")
+Range("EJ123").Value = Sheets("Kalamein Shop").Range("P58")
+Range("FC123").Value = Sheets("Assembly").Range("P58")
+Range("FC124").Value = Sheets("Assembly").Range("P59")
+Range("FQ123").Value = Sheets("Prehang").Range("P58")
+Range("FQ124").Value = Sheets("Prehang").Range("P59")
+
+ElseIf Range("AQ59") <> "" Then
+
+Range("EI123").Value = ""
+Range("EJ123").Value = ""
+Range("FC123").Value = ""
+Range("FC124").Value = ""
+Range("FQ123").Value = ""
+Range("FQ124").Value = ""
+
+End If
+
+End Sub
+Sub KeepWork75()
+
+'51
+If Range("BL11") = "" Then
+
+Range("EL75").Value = Sheets("Kalamein Shop").Range("V10")
+Range("EM75").Value = Sheets("Kalamein Shop").Range("W10")
+Range("FE75").Value = Sheets("Assembly").Range("W10")
+Range("FE76").Value = Sheets("Assembly").Range("W11")
+Range("FS75").Value = Sheets("Prehang").Range("W10")
+Range("FS76").Value = Sheets("Prehang").Range("W11")
+
+ElseIf Range("BL11") <> "" Then
+
+Range("EL75").Value = ""
+Range("EM75").Value = ""
+Range("FE75").Value = ""
+Range("FE76").Value = ""
+Range("FS75").Value = ""
+Range("FS76").Value = ""
+
+End If
+
+'52
+If Range("BL13") = "" Then
+
+Range("EL77").Value = Sheets("Kalamein Shop").Range("V12")
+Range("EM77").Value = Sheets("Kalamein Shop").Range("W12")
+Range("FE77").Value = Sheets("Assembly").Range("W12")
+Range("FE78").Value = Sheets("Assembly").Range("W13")
+Range("FS77").Value = Sheets("Prehang").Range("W12")
+Range("FS78").Value = Sheets("Prehang").Range("W13")
+
+ElseIf Range("BL13") <> "" Then
+
+Range("EL77").Value = ""
+Range("EM77").Value = ""
+Range("FE77").Value = ""
+Range("FE78").Value = ""
+Range("FS77").Value = ""
+Range("FS78").Value = ""
+
+End If
+
+'53
+If Range("BL15") = "" Then
+
+Range("EL79").Value = Sheets("Kalamein Shop").Range("V14")
+Range("EM79").Value = Sheets("Kalamein Shop").Range("W14")
+Range("FE79").Value = Sheets("Assembly").Range("W14")
+Range("FE80").Value = Sheets("Assembly").Range("W15")
+Range("FS79").Value = Sheets("Prehang").Range("W14")
+Range("FS80").Value = Sheets("Prehang").Range("W15")
+
+ElseIf Range("BL15") <> "" Then
+
+Range("EL79").Value = ""
+Range("EM79").Value = ""
+Range("FE79").Value = ""
+Range("FE80").Value = ""
+Range("FS79").Value = ""
+Range("FS80").Value = ""
+
+End If
+
+'54
+If Range("BL17") = "" Then
+
+Range("EL81").Value = Sheets("Kalamein Shop").Range("V16")
+Range("EM81").Value = Sheets("Kalamein Shop").Range("W16")
+Range("FE81").Value = Sheets("Assembly").Range("W16")
+Range("FE82").Value = Sheets("Assembly").Range("W17")
+Range("FS81").Value = Sheets("Prehang").Range("W16")
+Range("FS82").Value = Sheets("Prehang").Range("W17")
+
+ElseIf Range("BL17") <> "" Then
+
+Range("EL81").Value = ""
+Range("EM81").Value = ""
+Range("FE81").Value = ""
+Range("FE82").Value = ""
+Range("FS81").Value = ""
+Range("FS82").Value = ""
+
+End If
+
+'55
+If Range("BL19") = "" Then
+
+Range("EL83").Value = Sheets("Kalamein Shop").Range("V18")
+Range("EM83").Value = Sheets("Kalamein Shop").Range("W18")
+Range("FE83").Value = Sheets("Assembly").Range("W18")
+Range("FE84").Value = Sheets("Assembly").Range("W19")
+Range("FS83").Value = Sheets("Prehang").Range("W18")
+Range("FS84").Value = Sheets("Prehang").Range("W19")
+
+ElseIf Range("BL19") <> "" Then
+
+Range("EL83").Value = ""
+Range("EM83").Value = ""
+Range("FE83").Value = ""
+Range("FE84").Value = ""
+Range("FS83").Value = ""
+Range("FS84").Value = ""
+
+End If
+
+'56
+If Range("BL21") = "" Then
+
+Range("EL85").Value = Sheets("Kalamein Shop").Range("V20")
+Range("EM85").Value = Sheets("Kalamein Shop").Range("W20")
+Range("FE85").Value = Sheets("Assembly").Range("W20")
+Range("FE86").Value = Sheets("Assembly").Range("W21")
+Range("FS85").Value = Sheets("Prehang").Range("W20")
+Range("FS86").Value = Sheets("Prehang").Range("W21")
+
+ElseIf Range("BL21") <> "" Then
+
+Range("EL85").Value = ""
+Range("EM85").Value = ""
+Range("FE85").Value = ""
+Range("FE86").Value = ""
+Range("FS85").Value = ""
+Range("FS86").Value = ""
+
+End If
+
+'57
+If Range("BL23") = "" Then
+
+Range("EL87").Value = Sheets("Kalamein Shop").Range("V22")
+Range("EM87").Value = Sheets("Kalamein Shop").Range("W22")
+Range("FE87").Value = Sheets("Assembly").Range("W22")
+Range("FE88").Value = Sheets("Assembly").Range("W23")
+Range("FS87").Value = Sheets("Prehang").Range("W22")
+Range("FS88").Value = Sheets("Prehang").Range("W23")
+
+ElseIf Range("BL23") <> "" Then
+
+Range("EL87").Value = ""
+Range("EM87").Value = ""
+Range("FE87").Value = ""
+Range("FE88").Value = ""
+Range("FS87").Value = ""
+Range("FS88").Value = ""
+
+End If
+
+'58
+If Range("BL25") = "" Then
+
+Range("EL89").Value = Sheets("Kalamein Shop").Range("V24")
+Range("EM89").Value = Sheets("Kalamein Shop").Range("W24")
+Range("FE89").Value = Sheets("Assembly").Range("W24")
+Range("FE90").Value = Sheets("Assembly").Range("W25")
+Range("FS89").Value = Sheets("Prehang").Range("W24")
+Range("FS90").Value = Sheets("Prehang").Range("W25")
+
+ElseIf Range("BL25") <> "" Then
+
+Range("EL89").Value = ""
+Range("EM89").Value = ""
+Range("FE89").Value = ""
+Range("FE90").Value = ""
+Range("FS89").Value = ""
+Range("FS90").Value = ""
+
+End If
+
+'59
+If Range("BL27") = "" Then
+
+Range("EL91").Value = Sheets("Kalamein Shop").Range("V26")
+Range("EM91").Value = Sheets("Kalamein Shop").Range("W26")
+Range("FE91").Value = Sheets("Assembly").Range("W26")
+Range("FE92").Value = Sheets("Assembly").Range("W27")
+Range("FS91").Value = Sheets("Prehang").Range("W26")
+Range("FS92").Value = Sheets("Prehang").Range("W27")
+
+ElseIf Range("BL27") <> "" Then
+
+Range("EL91").Value = ""
+Range("EM91").Value = ""
+Range("FE91").Value = ""
+Range("FE92").Value = ""
+Range("FS91").Value = ""
+Range("FS92").Value = ""
+
+End If
+
+'60
+If Range("BL29") = "" Then
+
+Range("EL93").Value = Sheets("Kalamein Shop").Range("V28")
+Range("EM93").Value = Sheets("Kalamein Shop").Range("W28")
+Range("FE93").Value = Sheets("Assembly").Range("W28")
+Range("FE94").Value = Sheets("Assembly").Range("W29")
+Range("FS93").Value = Sheets("Prehang").Range("W28")
+Range("FS94").Value = Sheets("Prehang").Range("W29")
+
+ElseIf Range("BL29") <> "" Then
+
+Range("EL93").Value = ""
+Range("EM93").Value = ""
+Range("FE93").Value = ""
+Range("FE94").Value = ""
+Range("FS93").Value = ""
+Range("FS94").Value = ""
+
+End If
+
+'61
+If Range("BL31") = "" Then
+
+Range("EL95").Value = Sheets("Kalamein Shop").Range("V30")
+Range("EM95").Value = Sheets("Kalamein Shop").Range("W30")
+Range("FE95").Value = Sheets("Assembly").Range("W30")
+Range("FE96").Value = Sheets("Assembly").Range("W31")
+Range("FS95").Value = Sheets("Prehang").Range("W30")
+Range("FS96").Value = Sheets("Prehang").Range("W31")
+
+ElseIf Range("BL31") <> "" Then
+
+Range("EL95").Value = ""
+Range("EM95").Value = ""
+Range("FE95").Value = ""
+Range("FE96").Value = ""
+Range("FS95").Value = ""
+Range("FS96").Value = ""
+
+End If
+
+'62
+If Range("BL33") = "" Then
+
+Range("EL97").Value = Sheets("Kalamein Shop").Range("V32")
+Range("EM97").Value = Sheets("Kalamein Shop").Range("W32")
+Range("FE97").Value = Sheets("Assembly").Range("W32")
+Range("FE98").Value = Sheets("Assembly").Range("W33")
+Range("FS97").Value = Sheets("Prehang").Range("W32")
+Range("FS98").Value = Sheets("Prehang").Range("W33")
+
+ElseIf Range("BL33") <> "" Then
+
+Range("EL97").Value = ""
+Range("EM97").Value = ""
+Range("FE97").Value = ""
+Range("FE98").Value = ""
+Range("FS97").Value = ""
+Range("FS98").Value = ""
+
+End If
+
+'63
+If Range("BL35") = "" Then
+
+Range("EL99").Value = Sheets("Kalamein Shop").Range("V34")
+Range("EM99").Value = Sheets("Kalamein Shop").Range("W34")
+Range("FE99").Value = Sheets("Assembly").Range("W34")
+Range("FE100").Value = Sheets("Assembly").Range("W35")
+Range("FS99").Value = Sheets("Prehang").Range("W34")
+Range("FS100").Value = Sheets("Prehang").Range("W35")
+
+ElseIf Range("BL35") <> "" Then
+
+Range("EL99").Value = ""
+Range("EM99").Value = ""
+Range("FE99").Value = ""
+Range("FE100").Value = ""
+Range("FS99").Value = ""
+Range("FS100").Value = ""
+
+End If
+
+'64
+If Range("BL37") = "" Then
+
+Range("EL101").Value = Sheets("Kalamein Shop").Range("V36")
+Range("EM101").Value = Sheets("Kalamein Shop").Range("W36")
+Range("FE101").Value = Sheets("Assembly").Range("W36")
+Range("FE102").Value = Sheets("Assembly").Range("W37")
+Range("FS101").Value = Sheets("Prehang").Range("W36")
+Range("FS102").Value = Sheets("Prehang").Range("W37")
+
+ElseIf Range("BL37") <> "" Then
+
+Range("EL101").Value = ""
+Range("EM101").Value = ""
+Range("FE101").Value = ""
+Range("FE102").Value = ""
+Range("FS101").Value = ""
+Range("FS102").Value = ""
+
+End If
+
+'65
+If Range("BL39") = "" Then
+
+Range("EL103").Value = Sheets("Kalamein Shop").Range("V38")
+Range("EM103").Value = Sheets("Kalamein Shop").Range("W38")
+Range("FE103").Value = Sheets("Assembly").Range("W38")
+Range("FE104").Value = Sheets("Assembly").Range("W39")
+Range("FS103").Value = Sheets("Prehang").Range("W38")
+Range("FS104").Value = Sheets("Prehang").Range("W39")
+
+ElseIf Range("BL39") <> "" Then
+
+Range("EL103").Value = ""
+Range("EM103").Value = ""
+Range("FE103").Value = ""
+Range("FE104").Value = ""
+Range("FS103").Value = ""
+Range("FS104").Value = ""
+
+End If
+
+'66
+If Range("BL41") = "" Then
+
+Range("EL105").Value = Sheets("Kalamein Shop").Range("V40")
+Range("EM105").Value = Sheets("Kalamein Shop").Range("W40")
+Range("FE105").Value = Sheets("Assembly").Range("W40")
+Range("FE106").Value = Sheets("Assembly").Range("W41")
+Range("FS105").Value = Sheets("Prehang").Range("W40")
+Range("FS106").Value = Sheets("Prehang").Range("W41")
+
+ElseIf Range("BL41") <> "" Then
+
+Range("EL105").Value = ""
+Range("EM105").Value = ""
+Range("FE105").Value = ""
+Range("FE106").Value = ""
+Range("FS105").Value = ""
+Range("FS106").Value = ""
+
+End If
+
+'67
+If Range("BL43") = "" Then
+
+Range("EL107").Value = Sheets("Kalamein Shop").Range("V42")
+Range("EM107").Value = Sheets("Kalamein Shop").Range("W42")
+Range("FE107").Value = Sheets("Assembly").Range("W42")
+Range("FE108").Value = Sheets("Assembly").Range("W43")
+Range("FS107").Value = Sheets("Prehang").Range("W42")
+Range("FS108").Value = Sheets("Prehang").Range("W43")
+
+ElseIf Range("BL43") <> "" Then
+
+Range("EL107").Value = ""
+Range("EM107").Value = ""
+Range("FE107").Value = ""
+Range("FE108").Value = ""
+Range("FS107").Value = ""
+Range("FS108").Value = ""
+
+End If
+
+'68
+If Range("BL45") = "" Then
+
+Range("EL109").Value = Sheets("Kalamein Shop").Range("V44")
+Range("EM109").Value = Sheets("Kalamein Shop").Range("W44")
+Range("FE109").Value = Sheets("Assembly").Range("W44")
+Range("FE110").Value = Sheets("Assembly").Range("W45")
+Range("FS109").Value = Sheets("Prehang").Range("W44")
+Range("FS110").Value = Sheets("Prehang").Range("W45")
+
+ElseIf Range("BL45") <> "" Then
+
+Range("EL109").Value = ""
+Range("EM109").Value = ""
+Range("FE109").Value = ""
+Range("FE110").Value = ""
+Range("FS109").Value = ""
+Range("FS110").Value = ""
+
+End If
+
+'69
+If Range("BL47") = "" Then
+
+Range("EL111").Value = Sheets("Kalamein Shop").Range("V46")
+Range("EM111").Value = Sheets("Kalamein Shop").Range("W46")
+Range("FE111").Value = Sheets("Assembly").Range("W46")
+Range("FE112").Value = Sheets("Assembly").Range("W47")
+Range("FS111").Value = Sheets("Prehang").Range("W46")
+Range("FS112").Value = Sheets("Prehang").Range("W47")
+
+ElseIf Range("BL47") <> "" Then
+
+Range("EL111").Value = ""
+Range("EM111").Value = ""
+Range("FE111").Value = ""
+Range("FE112").Value = ""
+Range("FS111").Value = ""
+Range("FS112").Value = ""
+
+End If
+
+'70
+If Range("BL49") = "" Then
+
+Range("EL113").Value = Sheets("Kalamein Shop").Range("V48")
+Range("EM113").Value = Sheets("Kalamein Shop").Range("W48")
+Range("FE113").Value = Sheets("Assembly").Range("W48")
+Range("FE114").Value = Sheets("Assembly").Range("W49")
+Range("FS113").Value = Sheets("Prehang").Range("W48")
+Range("FS114").Value = Sheets("Prehang").Range("W49")
+
+ElseIf Range("BL49") <> "" Then
+
+Range("EL113").Value = ""
+Range("EM113").Value = ""
+Range("FE113").Value = ""
+Range("FE114").Value = ""
+Range("FS113").Value = ""
+Range("FS114").Value = ""
+
+End If
+
+'71
+If Range("BL51") = "" Then
+
+Range("EL115").Value = Sheets("Kalamein Shop").Range("V50")
+Range("EM115").Value = Sheets("Kalamein Shop").Range("W50")
+Range("FE115").Value = Sheets("Assembly").Range("W50")
+Range("FE116").Value = Sheets("Assembly").Range("W51")
+Range("FS115").Value = Sheets("Prehang").Range("W50")
+Range("FS116").Value = Sheets("Prehang").Range("W51")
+
+ElseIf Range("BL51") <> "" Then
+
+Range("EL115").Value = ""
+Range("EM115").Value = ""
+Range("FE115").Value = ""
+Range("FE116").Value = ""
+Range("FS115").Value = ""
+Range("FS116").Value = ""
+
+End If
+
+'72
+If Range("BL53") = "" Then
+
+Range("EL117").Value = Sheets("Kalamein Shop").Range("V52")
+Range("EM117").Value = Sheets("Kalamein Shop").Range("W52")
+Range("FE117").Value = Sheets("Assembly").Range("W52")
+Range("FE118").Value = Sheets("Assembly").Range("W53")
+Range("FS117").Value = Sheets("Prehang").Range("W52")
+Range("FS118").Value = Sheets("Prehang").Range("W53")
+
+ElseIf Range("BL53") <> "" Then
+
+Range("EL117").Value = ""
+Range("EM117").Value = ""
+Range("FE117").Value = ""
+Range("FE118").Value = ""
+Range("FS117").Value = ""
+Range("FS118").Value = ""
+
+End If
+
+'73
+If Range("BL55") = "" Then
+
+Range("EL119").Value = Sheets("Kalamein Shop").Range("V54")
+Range("EM119").Value = Sheets("Kalamein Shop").Range("W54")
+Range("FE119").Value = Sheets("Assembly").Range("W54")
+Range("FE120").Value = Sheets("Assembly").Range("W55")
+Range("FS119").Value = Sheets("Prehang").Range("W54")
+Range("FS120").Value = Sheets("Prehang").Range("W55")
+
+ElseIf Range("BL55") <> "" Then
+
+Range("EL119").Value = ""
+Range("EM119").Value = ""
+Range("FE119").Value = ""
+Range("FE120").Value = ""
+Range("FS119").Value = ""
+Range("FS120").Value = ""
+
+End If
+
+'74
+If Range("BL57") = "" Then
+
+Range("EL121").Value = Sheets("Kalamein Shop").Range("V56")
+Range("EM121").Value = Sheets("Kalamein Shop").Range("W56")
+Range("FE121").Value = Sheets("Assembly").Range("W56")
+Range("FE122").Value = Sheets("Assembly").Range("W57")
+Range("FS121").Value = Sheets("Prehang").Range("W56")
+Range("FS122").Value = Sheets("Prehang").Range("W57")
+
+ElseIf Range("BL57") <> "" Then
+
+Range("EL121").Value = ""
+Range("EM121").Value = ""
+Range("FE121").Value = ""
+Range("FE122").Value = ""
+Range("FS121").Value = ""
+Range("FS122").Value = ""
+
+End If
+
+'75
+If Range("BL59") = "" Then
+
+Range("EL123").Value = Sheets("Kalamein Shop").Range("V58")
+Range("EM123").Value = Sheets("Kalamein Shop").Range("W58")
+Range("FE123").Value = Sheets("Assembly").Range("W58")
+Range("FE124").Value = Sheets("Assembly").Range("W59")
+Range("FS123").Value = Sheets("Prehang").Range("W58")
+Range("FS124").Value = Sheets("Prehang").Range("W59")
+
+ElseIf Range("BL59") <> "" Then
+
+Range("EL123").Value = ""
+Range("EM123").Value = ""
+Range("FE123").Value = ""
+Range("FE124").Value = ""
+Range("FS123").Value = ""
+Range("FS124").Value = ""
+
+End If
+
+End Sub
+Sub KeepWork100()
+
+'76
+If Range("CG11") = "" Then
+
+Range("EO75").Value = Sheets("Kalamein Shop").Range("AC10")
+Range("EP75").Value = Sheets("Kalamein Shop").Range("AD10")
+Range("FG75").Value = Sheets("Assembly").Range("AD10")
+Range("FG76").Value = Sheets("Assembly").Range("AD11")
+Range("FU75").Value = Sheets("Prehang").Range("AD10")
+Range("FU76").Value = Sheets("Prehang").Range("AD11")
+
+ElseIf Range("CG11") <> "" Then
+
+Range("EO75").Value = ""
+Range("EP75").Value = ""
+Range("FG75").Value = ""
+Range("FG76").Value = ""
+Range("FU75").Value = ""
+Range("FU76").Value = ""
+
+End If
+
+'77
+If Range("CG13") = "" Then
+
+Range("EO77").Value = Sheets("Kalamein Shop").Range("AC12")
+Range("EP77").Value = Sheets("Kalamein Shop").Range("AD12")
+Range("FG77").Value = Sheets("Assembly").Range("AD12")
+Range("FG78").Value = Sheets("Assembly").Range("AD13")
+Range("FU77").Value = Sheets("Prehang").Range("AD12")
+Range("FU78").Value = Sheets("Prehang").Range("AD13")
+
+ElseIf Range("CG13") <> "" Then
+
+Range("EO77").Value = ""
+Range("EP77").Value = ""
+Range("FG77").Value = ""
+Range("FG78").Value = ""
+Range("FU77").Value = ""
+Range("FU78").Value = ""
+
+End If
+
+'78
+If Range("CG15") = "" Then
+
+Range("EO79").Value = Sheets("Kalamein Shop").Range("AC14")
+Range("EP79").Value = Sheets("Kalamein Shop").Range("AD14")
+Range("FG79").Value = Sheets("Assembly").Range("AD14")
+Range("FG80").Value = Sheets("Assembly").Range("AD15")
+Range("FU79").Value = Sheets("Prehang").Range("AD14")
+Range("FU80").Value = Sheets("Prehang").Range("AD15")
+
+ElseIf Range("CG15") <> "" Then
+
+Range("EO79").Value = ""
+Range("EP79").Value = ""
+Range("FG79").Value = ""
+Range("FG80").Value = ""
+Range("FU79").Value = ""
+Range("FU80").Value = ""
+
+End If
+
+'79
+If Range("CG17") = "" Then
+
+Range("EO81").Value = Sheets("Kalamein Shop").Range("AC16")
+Range("EP81").Value = Sheets("Kalamein Shop").Range("AD16")
+Range("FG81").Value = Sheets("Assembly").Range("AD16")
+Range("FG82").Value = Sheets("Assembly").Range("AD17")
+Range("FU81").Value = Sheets("Prehang").Range("AD16")
+Range("FU82").Value = Sheets("Prehang").Range("AD17")
+
+ElseIf Range("CG17") <> "" Then
+
+Range("EO81").Value = ""
+Range("EP81").Value = ""
+Range("FG81").Value = ""
+Range("FG82").Value = ""
+Range("FU81").Value = ""
+Range("FU82").Value = ""
+
+End If
+
+'80
+If Range("CG19") = "" Then
+
+Range("EO83").Value = Sheets("Kalamein Shop").Range("AC18")
+Range("EP83").Value = Sheets("Kalamein Shop").Range("AD18")
+Range("FG83").Value = Sheets("Assembly").Range("AD18")
+Range("FG84").Value = Sheets("Assembly").Range("AD19")
+Range("FU83").Value = Sheets("Prehang").Range("AD18")
+Range("FU84").Value = Sheets("Prehang").Range("AD19")
+
+ElseIf Range("CG19") <> "" Then
+
+Range("EO83").Value = ""
+Range("EP83").Value = ""
+Range("FG83").Value = ""
+Range("FG84").Value = ""
+Range("FU83").Value = ""
+Range("FU84").Value = ""
+
+End If
+
+'81
+If Range("CG21") = "" Then
+
+Range("EO85").Value = Sheets("Kalamein Shop").Range("AC20")
+Range("EP85").Value = Sheets("Kalamein Shop").Range("AD20")
+Range("FG85").Value = Sheets("Assembly").Range("AD20")
+Range("FG86").Value = Sheets("Assembly").Range("AD21")
+Range("FU85").Value = Sheets("Prehang").Range("AD20")
+Range("FU86").Value = Sheets("Prehang").Range("AD21")
+
+ElseIf Range("CG21") <> "" Then
+
+Range("EO85").Value = ""
+Range("EP85").Value = ""
+Range("FG85").Value = ""
+Range("FG86").Value = ""
+Range("FU85").Value = ""
+Range("FU86").Value = ""
+
+End If
+
+'82
+If Range("CG23") = "" Then
+
+Range("EO87").Value = Sheets("Kalamein Shop").Range("AC22")
+Range("EP87").Value = Sheets("Kalamein Shop").Range("AD22")
+Range("FG87").Value = Sheets("Assembly").Range("AD22")
+Range("FG88").Value = Sheets("Assembly").Range("AD23")
+Range("FU87").Value = Sheets("Prehang").Range("AD22")
+Range("FU88").Value = Sheets("Prehang").Range("AD23")
+
+ElseIf Range("CG23") <> "" Then
+
+Range("EO87").Value = ""
+Range("EP87").Value = ""
+Range("FG87").Value = ""
+Range("FG88").Value = ""
+Range("FU87").Value = ""
+Range("FU88").Value = ""
+
+End If
+
+'83
+If Range("CG25") = "" Then
+
+Range("EO89").Value = Sheets("Kalamein Shop").Range("AC24")
+Range("EP89").Value = Sheets("Kalamein Shop").Range("AD24")
+Range("FG89").Value = Sheets("Assembly").Range("AD24")
+Range("FG90").Value = Sheets("Assembly").Range("AD25")
+Range("FU89").Value = Sheets("Prehang").Range("AD24")
+Range("FU90").Value = Sheets("Prehang").Range("AD25")
+
+ElseIf Range("CG25") <> "" Then
+
+Range("EO89").Value = ""
+Range("EP89").Value = ""
+Range("FG89").Value = ""
+Range("FG90").Value = ""
+Range("FU89").Value = ""
+Range("FU90").Value = ""
+
+End If
+
+'84
+If Range("CG27") = "" Then
+
+Range("EO91").Value = Sheets("Kalamein Shop").Range("AC26")
+Range("EP91").Value = Sheets("Kalamein Shop").Range("AD26")
+Range("FG91").Value = Sheets("Assembly").Range("AD26")
+Range("FG92").Value = Sheets("Assembly").Range("AD27")
+Range("FU91").Value = Sheets("Prehang").Range("AD26")
+Range("FU92").Value = Sheets("Prehang").Range("AD27")
+
+ElseIf Range("CG27") <> "" Then
+
+Range("EO91").Value = ""
+Range("EP91").Value = ""
+Range("FG91").Value = ""
+Range("FG92").Value = ""
+Range("FU91").Value = ""
+Range("FU92").Value = ""
+
+End If
+
+'85
+If Range("CG29") = "" Then
+
+Range("EO93").Value = Sheets("Kalamein Shop").Range("AC28")
+Range("EP93").Value = Sheets("Kalamein Shop").Range("AD28")
+Range("FG93").Value = Sheets("Assembly").Range("AD28")
+Range("FG94").Value = Sheets("Assembly").Range("AD29")
+Range("FU93").Value = Sheets("Prehang").Range("AD28")
+Range("FU94").Value = Sheets("Prehang").Range("AD29")
+
+ElseIf Range("CG29") <> "" Then
+
+Range("EO93").Value = ""
+Range("EP93").Value = ""
+Range("FG93").Value = ""
+Range("FG94").Value = ""
+Range("FU93").Value = ""
+Range("FU94").Value = ""
+
+End If
+
+'86
+If Range("CG31") = "" Then
+
+Range("EO95").Value = Sheets("Kalamein Shop").Range("AC30")
+Range("EP95").Value = Sheets("Kalamein Shop").Range("AD30")
+Range("FG95").Value = Sheets("Assembly").Range("AD30")
+Range("FG96").Value = Sheets("Assembly").Range("AD31")
+Range("FU95").Value = Sheets("Prehang").Range("AD30")
+Range("FU96").Value = Sheets("Prehang").Range("AD31")
+
+ElseIf Range("CG31") <> "" Then
+
+Range("EO95").Value = ""
+Range("EP95").Value = ""
+Range("FG95").Value = ""
+Range("FG96").Value = ""
+Range("FU95").Value = ""
+Range("FU96").Value = ""
+
+End If
+
+'87
+If Range("CG33") = "" Then
+
+Range("EO97").Value = Sheets("Kalamein Shop").Range("AC32")
+Range("EP97").Value = Sheets("Kalamein Shop").Range("AD32")
+Range("FG97").Value = Sheets("Assembly").Range("AD32")
+Range("FG98").Value = Sheets("Assembly").Range("AD33")
+Range("FU97").Value = Sheets("Prehang").Range("AD32")
+Range("FU98").Value = Sheets("Prehang").Range("AD33")
+
+ElseIf Range("CG33") <> "" Then
+
+Range("EO97").Value = ""
+Range("EP97").Value = ""
+Range("FG97").Value = ""
+Range("FG98").Value = ""
+Range("FU97").Value = ""
+Range("FU98").Value = ""
+
+End If
+
+'88
+If Range("CG35") = "" Then
+
+Range("EO99").Value = Sheets("Kalamein Shop").Range("AC34")
+Range("EP99").Value = Sheets("Kalamein Shop").Range("AD34")
+Range("FG99").Value = Sheets("Assembly").Range("AD34")
+Range("FG100").Value = Sheets("Assembly").Range("AD35")
+Range("FU99").Value = Sheets("Prehang").Range("AD34")
+Range("FU100").Value = Sheets("Prehang").Range("AD35")
+
+ElseIf Range("CG35") <> "" Then
+
+Range("EO99").Value = ""
+Range("EP99").Value = ""
+Range("FG99").Value = ""
+Range("FG100").Value = ""
+Range("FU99").Value = ""
+Range("FU100").Value = ""
+
+End If
+
+'89
+If Range("CG37") = "" Then
+
+Range("EO101").Value = Sheets("Kalamein Shop").Range("AC36")
+Range("EP101").Value = Sheets("Kalamein Shop").Range("AD36")
+Range("FG101").Value = Sheets("Assembly").Range("AD36")
+Range("FG102").Value = Sheets("Assembly").Range("AD37")
+Range("FU101").Value = Sheets("Prehang").Range("AD36")
+Range("FU102").Value = Sheets("Prehang").Range("AD37")
+
+ElseIf Range("CG37") <> "" Then
+
+Range("EO101").Value = ""
+Range("EP101").Value = ""
+Range("FG101").Value = ""
+Range("FG102").Value = ""
+Range("FU101").Value = ""
+Range("FU102").Value = ""
+
+End If
+
+'90
+If Range("CG39") = "" Then
+
+Range("EO103").Value = Sheets("Kalamein Shop").Range("AC38")
+Range("EP103").Value = Sheets("Kalamein Shop").Range("AD38")
+Range("FG103").Value = Sheets("Assembly").Range("AD38")
+Range("FG104").Value = Sheets("Assembly").Range("AD39")
+Range("FU103").Value = Sheets("Prehang").Range("AD38")
+Range("FU104").Value = Sheets("Prehang").Range("AD39")
+
+ElseIf Range("CG39") <> "" Then
+
+Range("EO103").Value = ""
+Range("EP103").Value = ""
+Range("FG103").Value = ""
+Range("FG104").Value = ""
+Range("FU103").Value = ""
+Range("FU104").Value = ""
+
+End If
+
+'91
+If Range("CG41") = "" Then
+
+Range("EO105").Value = Sheets("Kalamein Shop").Range("AC40")
+Range("EP105").Value = Sheets("Kalamein Shop").Range("AD40")
+Range("FG105").Value = Sheets("Assembly").Range("AD40")
+Range("FG106").Value = Sheets("Assembly").Range("AD41")
+Range("FU105").Value = Sheets("Prehang").Range("AD40")
+Range("FU106").Value = Sheets("Prehang").Range("AD41")
+
+ElseIf Range("CG41") <> "" Then
+
+Range("EO105").Value = ""
+Range("EP105").Value = ""
+Range("FG105").Value = ""
+Range("FG106").Value = ""
+Range("FU105").Value = ""
+Range("FU106").Value = ""
+
+End If
+
+'92
+If Range("CG43") = "" Then
+
+Range("EO107").Value = Sheets("Kalamein Shop").Range("AC42")
+Range("EP107").Value = Sheets("Kalamein Shop").Range("AD42")
+Range("FG107").Value = Sheets("Assembly").Range("AD42")
+Range("FG108").Value = Sheets("Assembly").Range("AD43")
+Range("FU107").Value = Sheets("Prehang").Range("AD42")
+Range("FU108").Value = Sheets("Prehang").Range("AD43")
+
+ElseIf Range("CG43") <> "" Then
+
+Range("EO107").Value = ""
+Range("EP107").Value = ""
+Range("FG107").Value = ""
+Range("FG108").Value = ""
+Range("FU107").Value = ""
+Range("FU108").Value = ""
+
+End If
+
+'93
+If Range("CG45") = "" Then
+
+Range("EO109").Value = Sheets("Kalamein Shop").Range("AC44")
+Range("EP109").Value = Sheets("Kalamein Shop").Range("AD44")
+Range("FG109").Value = Sheets("Assembly").Range("AD44")
+Range("FG110").Value = Sheets("Assembly").Range("AD45")
+Range("FU109").Value = Sheets("Prehang").Range("AD44")
+Range("FU110").Value = Sheets("Prehang").Range("AD45")
+
+ElseIf Range("CG45") <> "" Then
+
+Range("EO109").Value = ""
+Range("EP109").Value = ""
+Range("FG109").Value = ""
+Range("FG110").Value = ""
+Range("FU109").Value = ""
+Range("FU110").Value = ""
+
+End If
+
+'94
+If Range("CG47") = "" Then
+
+Range("EO111").Value = Sheets("Kalamein Shop").Range("AC46")
+Range("EP111").Value = Sheets("Kalamein Shop").Range("AD46")
+Range("FG111").Value = Sheets("Assembly").Range("AD46")
+Range("FG112").Value = Sheets("Assembly").Range("AD47")
+Range("FU111").Value = Sheets("Prehang").Range("AD46")
+Range("FU112").Value = Sheets("Prehang").Range("AD47")
+
+ElseIf Range("CG47") <> "" Then
+
+Range("EO111").Value = ""
+Range("EP111").Value = ""
+Range("FG111").Value = ""
+Range("FG112").Value = ""
+Range("FU111").Value = ""
+Range("FU112").Value = ""
+
+End If
+
+'95
+If Range("CG49") = "" Then
+
+Range("EO113").Value = Sheets("Kalamein Shop").Range("AC48")
+Range("EP113").Value = Sheets("Kalamein Shop").Range("AD48")
+Range("FG113").Value = Sheets("Assembly").Range("AD48")
+Range("FG114").Value = Sheets("Assembly").Range("AD49")
+Range("FU113").Value = Sheets("Prehang").Range("AD48")
+Range("FU114").Value = Sheets("Prehang").Range("AD49")
+
+ElseIf Range("CG49") <> "" Then
+
+Range("EO113").Value = ""
+Range("EP113").Value = ""
+Range("FG113").Value = ""
+Range("FG114").Value = ""
+Range("FU113").Value = ""
+Range("FU114").Value = ""
+
+End If
+
+'96
+If Range("CG51") = "" Then
+
+Range("EO115").Value = Sheets("Kalamein Shop").Range("AC50")
+Range("EP115").Value = Sheets("Kalamein Shop").Range("AD50")
+Range("FG115").Value = Sheets("Assembly").Range("AD50")
+Range("FG116").Value = Sheets("Assembly").Range("AD51")
+Range("FU115").Value = Sheets("Prehang").Range("AD50")
+Range("FU116").Value = Sheets("Prehang").Range("AD51")
+
+ElseIf Range("CG51") <> "" Then
+
+Range("EO115").Value = ""
+Range("EP115").Value = ""
+Range("FG115").Value = ""
+Range("FG116").Value = ""
+Range("FU115").Value = ""
+Range("FU116").Value = ""
+
+End If
+
+'97
+If Range("CG53") = "" Then
+
+Range("EO117").Value = Sheets("Kalamein Shop").Range("AC52")
+Range("EP117").Value = Sheets("Kalamein Shop").Range("AD52")
+Range("FG117").Value = Sheets("Assembly").Range("AD52")
+Range("FG118").Value = Sheets("Assembly").Range("AD53")
+Range("FU117").Value = Sheets("Prehang").Range("AD52")
+Range("FU118").Value = Sheets("Prehang").Range("AD53")
+
+ElseIf Range("CG53") <> "" Then
+
+Range("EO117").Value = ""
+Range("EP117").Value = ""
+Range("FG117").Value = ""
+Range("FG118").Value = ""
+Range("FU117").Value = ""
+Range("FU118").Value = ""
+
+End If
+
+'98
+If Range("CG55") = "" Then
+
+Range("EO119").Value = Sheets("Kalamein Shop").Range("AC54")
+Range("EP119").Value = Sheets("Kalamein Shop").Range("AD54")
+Range("FG119").Value = Sheets("Assembly").Range("AD54")
+Range("FG120").Value = Sheets("Assembly").Range("AD55")
+Range("FU119").Value = Sheets("Prehang").Range("AD54")
+Range("FU120").Value = Sheets("Prehang").Range("AD55")
+
+ElseIf Range("CG55") <> "" Then
+
+Range("EO119").Value = ""
+Range("EP119").Value = ""
+Range("FG119").Value = ""
+Range("FG120").Value = ""
+Range("FU119").Value = ""
+Range("FU120").Value = ""
+
+End If
+
+'99
+If Range("CG57") = "" Then
+
+Range("EO121").Value = Sheets("Kalamein Shop").Range("AC56")
+Range("EP121").Value = Sheets("Kalamein Shop").Range("AD56")
+Range("FG121").Value = Sheets("Assembly").Range("AD56")
+Range("FG122").Value = Sheets("Assembly").Range("AD57")
+Range("FU121").Value = Sheets("Prehang").Range("AD56")
+Range("FU122").Value = Sheets("Prehang").Range("AD57")
+
+ElseIf Range("CG57") <> "" Then
+
+Range("EO121").Value = ""
+Range("EP121").Value = ""
+Range("FG121").Value = ""
+Range("FG122").Value = ""
+Range("FU121").Value = ""
+Range("FU122").Value = ""
+
+End If
+
+'100
+If Range("CG59") = "" Then
+
+Range("EO123").Value = Sheets("Kalamein Shop").Range("AC58")
+Range("EP123").Value = Sheets("Kalamein Shop").Range("AD58")
+Range("FG123").Value = Sheets("Assembly").Range("AD58")
+Range("FG124").Value = Sheets("Assembly").Range("AD59")
+Range("FU123").Value = Sheets("Prehang").Range("AD58")
+Range("FU124").Value = Sheets("Prehang").Range("AD59")
+
+ElseIf Range("CG59") <> "" Then
+
+Range("EO123").Value = ""
+Range("EP123").Value = ""
+Range("FG123").Value = ""
+Range("FG124").Value = ""
+Range("FU123").Value = ""
+Range("FU124").Value = ""
+
+End If
+
+End Sub
+Sub KeepWork125()
+
+'101
+If Range("DB11") = "" Then
+
+Range("ER75").Value = Sheets("Kalamein Shop").Range("AJ10")
+Range("ES75").Value = Sheets("Kalamein Shop").Range("AK10")
+Range("FI75").Value = Sheets("Assembly").Range("AK10")
+Range("FI76").Value = Sheets("Assembly").Range("AK11")
+Range("FW75").Value = Sheets("Prehang").Range("AK10")
+Range("FW76").Value = Sheets("Prehang").Range("AK11")
+
+ElseIf Range("DB11") <> "" Then
+
+Range("ER75").Value = ""
+Range("ES75").Value = ""
+Range("FI75").Value = ""
+Range("FI76").Value = ""
+Range("FW75").Value = ""
+Range("FW76").Value = ""
+
+End If
+
+'102
+If Range("DB13") = "" Then
+
+Range("ER77").Value = Sheets("Kalamein Shop").Range("AJ12")
+Range("ES77").Value = Sheets("Kalamein Shop").Range("AK12")
+Range("FI77").Value = Sheets("Assembly").Range("AK12")
+Range("FI78").Value = Sheets("Assembly").Range("AK13")
+Range("FW77").Value = Sheets("Prehang").Range("AK12")
+Range("FW78").Value = Sheets("Prehang").Range("AK13")
+
+ElseIf Range("DB13") <> "" Then
+
+Range("ER77").Value = ""
+Range("ES77").Value = ""
+Range("FI77").Value = ""
+Range("FI78").Value = ""
+Range("FW77").Value = ""
+Range("FW78").Value = ""
+
+End If
+
+'103
+If Range("DB15") = "" Then
+
+Range("ER79").Value = Sheets("Kalamein Shop").Range("AJ14")
+Range("ES79").Value = Sheets("Kalamein Shop").Range("AK14")
+Range("FI79").Value = Sheets("Assembly").Range("AK14")
+Range("FI80").Value = Sheets("Assembly").Range("AK15")
+Range("FW79").Value = Sheets("Prehang").Range("AK14")
+Range("FW80").Value = Sheets("Prehang").Range("AK15")
+
+ElseIf Range("DB15") <> "" Then
+
+Range("ER79").Value = ""
+Range("ES79").Value = ""
+Range("FI79").Value = ""
+Range("FI80").Value = ""
+Range("FW79").Value = ""
+Range("FW80").Value = ""
+
+End If
+
+'104
+If Range("DB17") = "" Then
+
+Range("ER81").Value = Sheets("Kalamein Shop").Range("AJ16")
+Range("ES81").Value = Sheets("Kalamein Shop").Range("AK16")
+Range("FI81").Value = Sheets("Assembly").Range("AK16")
+Range("FI82").Value = Sheets("Assembly").Range("AK17")
+Range("FW81").Value = Sheets("Prehang").Range("AK16")
+Range("FW82").Value = Sheets("Prehang").Range("AK17")
+
+ElseIf Range("DB17") <> "" Then
+
+Range("ER81").Value = ""
+Range("ES81").Value = ""
+Range("FI81").Value = ""
+Range("FI82").Value = ""
+Range("FW81").Value = ""
+Range("FW82").Value = ""
+
+End If
+
+'105
+If Range("DB19") = "" Then
+
+Range("ER83").Value = Sheets("Kalamein Shop").Range("AJ18")
+Range("ES83").Value = Sheets("Kalamein Shop").Range("AK18")
+Range("FI83").Value = Sheets("Assembly").Range("AK18")
+Range("FI84").Value = Sheets("Assembly").Range("AK19")
+Range("FW83").Value = Sheets("Prehang").Range("AK18")
+Range("FW84").Value = Sheets("Prehang").Range("AK19")
+
+ElseIf Range("DB19") <> "" Then
+
+Range("ER83").Value = ""
+Range("ES83").Value = ""
+Range("FI83").Value = ""
+Range("FI84").Value = ""
+Range("FW83").Value = ""
+Range("FW84").Value = ""
+
+End If
+
+'106
+If Range("DB21") = "" Then
+
+Range("ER85").Value = Sheets("Kalamein Shop").Range("AJ20")
+Range("ES85").Value = Sheets("Kalamein Shop").Range("AK20")
+Range("FI85").Value = Sheets("Assembly").Range("AK20")
+Range("FI86").Value = Sheets("Assembly").Range("AK21")
+Range("FW85").Value = Sheets("Prehang").Range("AK20")
+Range("FW86").Value = Sheets("Prehang").Range("AK21")
+
+ElseIf Range("DB21") <> "" Then
+
+Range("ER85").Value = ""
+Range("ES85").Value = ""
+Range("FI85").Value = ""
+Range("FI86").Value = ""
+Range("FW85").Value = ""
+Range("FW86").Value = ""
+
+End If
+
+'107
+If Range("DB23") = "" Then
+
+Range("ER87").Value = Sheets("Kalamein Shop").Range("AJ22")
+Range("ES87").Value = Sheets("Kalamein Shop").Range("AK22")
+Range("FI87").Value = Sheets("Assembly").Range("AK22")
+Range("FI88").Value = Sheets("Assembly").Range("AK23")
+Range("FW87").Value = Sheets("Prehang").Range("AK22")
+Range("FW88").Value = Sheets("Prehang").Range("AK23")
+
+ElseIf Range("DB23") <> "" Then
+
+Range("ER87").Value = ""
+Range("ES87").Value = ""
+Range("FI87").Value = ""
+Range("FI88").Value = ""
+Range("FW87").Value = ""
+Range("FW88").Value = ""
+
+End If
+
+'108
+If Range("DB25") = "" Then
+
+Range("ER89").Value = Sheets("Kalamein Shop").Range("AJ24")
+Range("ES89").Value = Sheets("Kalamein Shop").Range("AK24")
+Range("FI89").Value = Sheets("Assembly").Range("AK24")
+Range("FI90").Value = Sheets("Assembly").Range("AK25")
+Range("FW89").Value = Sheets("Prehang").Range("AK24")
+Range("FW90").Value = Sheets("Prehang").Range("AK25")
+
+ElseIf Range("DB25") <> "" Then
+
+Range("ER89").Value = ""
+Range("ES89").Value = ""
+Range("FI89").Value = ""
+Range("FI90").Value = ""
+Range("FW89").Value = ""
+Range("FW90").Value = ""
+
+End If
+
+'109
+If Range("DB27") = "" Then
+
+Range("ER91").Value = Sheets("Kalamein Shop").Range("AJ26")
+Range("ES91").Value = Sheets("Kalamein Shop").Range("AK26")
+Range("FI91").Value = Sheets("Assembly").Range("AK26")
+Range("FI92").Value = Sheets("Assembly").Range("AK27")
+Range("FW91").Value = Sheets("Prehang").Range("AK26")
+Range("FW92").Value = Sheets("Prehang").Range("AK27")
+
+ElseIf Range("DB27") <> "" Then
+
+Range("ER91").Value = ""
+Range("ES91").Value = ""
+Range("FI91").Value = ""
+Range("FI92").Value = ""
+Range("FW91").Value = ""
+Range("FW92").Value = ""
+
+End If
+
+'110
+If Range("DB29") = "" Then
+
+Range("ER93").Value = Sheets("Kalamein Shop").Range("AJ28")
+Range("ES93").Value = Sheets("Kalamein Shop").Range("AK28")
+Range("FI93").Value = Sheets("Assembly").Range("AK28")
+Range("FI94").Value = Sheets("Assembly").Range("AK29")
+Range("FW93").Value = Sheets("Prehang").Range("AK28")
+Range("FW94").Value = Sheets("Prehang").Range("AK29")
+
+ElseIf Range("DB29") <> "" Then
+
+Range("ER93").Value = ""
+Range("ES93").Value = ""
+Range("FI93").Value = ""
+Range("FI94").Value = ""
+Range("FW93").Value = ""
+Range("FW94").Value = ""
+
+End If
+
+'111
+If Range("DB31") = "" Then
+
+Range("ER95").Value = Sheets("Kalamein Shop").Range("AJ30")
+Range("ES95").Value = Sheets("Kalamein Shop").Range("AK30")
+Range("FI95").Value = Sheets("Assembly").Range("AK30")
+Range("FI96").Value = Sheets("Assembly").Range("AK31")
+Range("FW95").Value = Sheets("Prehang").Range("AK30")
+Range("FW96").Value = Sheets("Prehang").Range("AK31")
+
+ElseIf Range("DB31") <> "" Then
+
+Range("ER95").Value = ""
+Range("ES95").Value = ""
+Range("FI95").Value = ""
+Range("FI96").Value = ""
+Range("FW95").Value = ""
+Range("FW96").Value = ""
+
+End If
+
+'112
+If Range("DB33") = "" Then
+
+Range("ER97").Value = Sheets("Kalamein Shop").Range("AJ32")
+Range("ES97").Value = Sheets("Kalamein Shop").Range("AK32")
+Range("FI97").Value = Sheets("Assembly").Range("AK32")
+Range("FI98").Value = Sheets("Assembly").Range("AK33")
+Range("FW97").Value = Sheets("Prehang").Range("AK32")
+Range("FW98").Value = Sheets("Prehang").Range("AK33")
+
+ElseIf Range("DB33") <> "" Then
+
+Range("ER97").Value = ""
+Range("ES97").Value = ""
+Range("FI97").Value = ""
+Range("FI98").Value = ""
+Range("FW97").Value = ""
+Range("FW98").Value = ""
+
+End If
+
+'113
+If Range("DB35") = "" Then
+
+Range("ER99").Value = Sheets("Kalamein Shop").Range("AJ34")
+Range("ES99").Value = Sheets("Kalamein Shop").Range("AK34")
+Range("FI99").Value = Sheets("Assembly").Range("AK34")
+Range("FI100").Value = Sheets("Assembly").Range("AK35")
+Range("FW99").Value = Sheets("Prehang").Range("AK34")
+Range("FW100").Value = Sheets("Prehang").Range("AK35")
+
+ElseIf Range("DB35") <> "" Then
+
+Range("ER99").Value = ""
+Range("ES99").Value = ""
+Range("FI99").Value = ""
+Range("FI100").Value = ""
+Range("FW99").Value = ""
+Range("FW100").Value = ""
+
+End If
+
+'114
+If Range("DB37") = "" Then
+
+Range("ER101").Value = Sheets("Kalamein Shop").Range("AJ36")
+Range("ES101").Value = Sheets("Kalamein Shop").Range("AK36")
+Range("FI101").Value = Sheets("Assembly").Range("AK36")
+Range("FI102").Value = Sheets("Assembly").Range("AK37")
+Range("FW101").Value = Sheets("Prehang").Range("AK36")
+Range("FW102").Value = Sheets("Prehang").Range("AK37")
+
+ElseIf Range("DB37") <> "" Then
+
+Range("ER101").Value = ""
+Range("ES101").Value = ""
+Range("FI101").Value = ""
+Range("FI102").Value = ""
+Range("FW101").Value = ""
+Range("FW102").Value = ""
+
+End If
+
+'115
+If Range("DB39") = "" Then
+
+Range("ER103").Value = Sheets("Kalamein Shop").Range("AJ38")
+Range("ES103").Value = Sheets("Kalamein Shop").Range("AK38")
+Range("FI103").Value = Sheets("Assembly").Range("AK38")
+Range("FI104").Value = Sheets("Assembly").Range("AK39")
+Range("FW103").Value = Sheets("Prehang").Range("AK38")
+Range("FW104").Value = Sheets("Prehang").Range("AK39")
+
+ElseIf Range("DB39") <> "" Then
+
+Range("ER103").Value = ""
+Range("ES103").Value = ""
+Range("FI103").Value = ""
+Range("FI104").Value = ""
+Range("FW103").Value = ""
+Range("FW104").Value = ""
+
+End If
+
+'116
+If Range("DB41") = "" Then
+
+Range("ER105").Value = Sheets("Kalamein Shop").Range("AJ40")
+Range("ES105").Value = Sheets("Kalamein Shop").Range("AK40")
+Range("FI105").Value = Sheets("Assembly").Range("AK40")
+Range("FI106").Value = Sheets("Assembly").Range("AK41")
+Range("FW105").Value = Sheets("Prehang").Range("AK40")
+Range("FW106").Value = Sheets("Prehang").Range("AK41")
+
+ElseIf Range("DB41") <> "" Then
+
+Range("ER105").Value = ""
+Range("ES105").Value = ""
+Range("FI105").Value = ""
+Range("FI106").Value = ""
+Range("FW105").Value = ""
+Range("FW106").Value = ""
+
+End If
+
+'117
+If Range("DB43") = "" Then
+
+Range("ER107").Value = Sheets("Kalamein Shop").Range("AJ42")
+Range("ES107").Value = Sheets("Kalamein Shop").Range("AK42")
+Range("FI107").Value = Sheets("Assembly").Range("AK42")
+Range("FI108").Value = Sheets("Assembly").Range("AK43")
+Range("FW107").Value = Sheets("Prehang").Range("AK42")
+Range("FW108").Value = Sheets("Prehang").Range("AK43")
+
+ElseIf Range("DB43") <> "" Then
+
+Range("ER107").Value = ""
+Range("ES107").Value = ""
+Range("FI107").Value = ""
+Range("FI108").Value = ""
+Range("FW107").Value = ""
+Range("FW108").Value = ""
+
+End If
+
+'118
+If Range("DB45") = "" Then
+
+Range("ER109").Value = Sheets("Kalamein Shop").Range("AJ44")
+Range("ES109").Value = Sheets("Kalamein Shop").Range("AK44")
+Range("FI109").Value = Sheets("Assembly").Range("AK44")
+Range("FI110").Value = Sheets("Assembly").Range("AK45")
+Range("FW109").Value = Sheets("Prehang").Range("AK44")
+Range("FW110").Value = Sheets("Prehang").Range("AK45")
+
+ElseIf Range("DB45") <> "" Then
+
+Range("ER109").Value = ""
+Range("ES109").Value = ""
+Range("FI109").Value = ""
+Range("FI110").Value = ""
+Range("FW109").Value = ""
+Range("FW110").Value = ""
+
+End If
+
+'119
+If Range("DB47") = "" Then
+
+Range("ER111").Value = Sheets("Kalamein Shop").Range("AJ46")
+Range("ES111").Value = Sheets("Kalamein Shop").Range("AK46")
+Range("FI111").Value = Sheets("Assembly").Range("AK46")
+Range("FI112").Value = Sheets("Assembly").Range("AK47")
+Range("FW111").Value = Sheets("Prehang").Range("AK46")
+Range("FW112").Value = Sheets("Prehang").Range("AK47")
+
+ElseIf Range("DB47") <> "" Then
+
+Range("ER111").Value = ""
+Range("ES111").Value = ""
+Range("FI111").Value = ""
+Range("FI112").Value = ""
+Range("FW111").Value = ""
+Range("FW112").Value = ""
+
+End If
+
+'120
+If Range("DB49") = "" Then
+
+Range("ER113").Value = Sheets("Kalamein Shop").Range("AJ48")
+Range("ES113").Value = Sheets("Kalamein Shop").Range("AK48")
+Range("FI113").Value = Sheets("Assembly").Range("AK48")
+Range("FI114").Value = Sheets("Assembly").Range("AK49")
+Range("FW113").Value = Sheets("Prehang").Range("AK48")
+Range("FW114").Value = Sheets("Prehang").Range("AK49")
+
+ElseIf Range("DB49") <> "" Then
+
+Range("ER113").Value = ""
+Range("ES113").Value = ""
+Range("FI113").Value = ""
+Range("FI114").Value = ""
+Range("FW113").Value = ""
+Range("FW114").Value = ""
+
+End If
+
+'121
+If Range("DB51") = "" Then
+
+Range("ER115").Value = Sheets("Kalamein Shop").Range("AJ50")
+Range("ES115").Value = Sheets("Kalamein Shop").Range("AK50")
+Range("FI115").Value = Sheets("Assembly").Range("AK50")
+Range("FI116").Value = Sheets("Assembly").Range("AK51")
+Range("FW115").Value = Sheets("Prehang").Range("AK50")
+Range("FW116").Value = Sheets("Prehang").Range("AK51")
+
+ElseIf Range("DB51") <> "" Then
+
+Range("ER115").Value = ""
+Range("ES115").Value = ""
+Range("FI115").Value = ""
+Range("FI116").Value = ""
+Range("FW115").Value = ""
+Range("FW116").Value = ""
+
+End If
+
+'122
+If Range("DB53") = "" Then
+
+Range("ER117").Value = Sheets("Kalamein Shop").Range("AJ52")
+Range("ES117").Value = Sheets("Kalamein Shop").Range("AK52")
+Range("FI117").Value = Sheets("Assembly").Range("AK52")
+Range("FI118").Value = Sheets("Assembly").Range("AK53")
+Range("FW117").Value = Sheets("Prehang").Range("AK52")
+Range("FW118").Value = Sheets("Prehang").Range("AK53")
+
+ElseIf Range("DB53") <> "" Then
+
+Range("ER117").Value = ""
+Range("ES117").Value = ""
+Range("FI117").Value = ""
+Range("FI118").Value = ""
+Range("FW117").Value = ""
+Range("FW118").Value = ""
+
+End If
+
+'123
+If Range("DB55") = "" Then
+
+Range("ER119").Value = Sheets("Kalamein Shop").Range("AJ54")
+Range("ES119").Value = Sheets("Kalamein Shop").Range("AK54")
+Range("FI119").Value = Sheets("Assembly").Range("AK54")
+Range("FI120").Value = Sheets("Assembly").Range("AK55")
+Range("FW119").Value = Sheets("Prehang").Range("AK54")
+Range("FW120").Value = Sheets("Prehang").Range("AK55")
+
+ElseIf Range("DB55") <> "" Then
+
+Range("ER119").Value = ""
+Range("ES119").Value = ""
+Range("FI119").Value = ""
+Range("FI120").Value = ""
+Range("FW119").Value = ""
+Range("FW120").Value = ""
+
+End If
+
+'124
+If Range("DB57") = "" Then
+
+Range("ER121").Value = Sheets("Kalamein Shop").Range("AJ56")
+Range("ES121").Value = Sheets("Kalamein Shop").Range("AK56")
+Range("FI121").Value = Sheets("Assembly").Range("AK56")
+Range("FI122").Value = Sheets("Assembly").Range("AK57")
+Range("FW121").Value = Sheets("Prehang").Range("AK56")
+Range("FW122").Value = Sheets("Prehang").Range("AK57")
+
+ElseIf Range("DB57") <> "" Then
+
+Range("ER121").Value = ""
+Range("ES121").Value = ""
+Range("FI121").Value = ""
+Range("FI122").Value = ""
+Range("FW121").Value = ""
+Range("FW122").Value = ""
+
+End If
+
+'125
+If Range("DB59") = "" Then
+
+Range("ER123").Value = Sheets("Kalamein Shop").Range("AJ58")
+Range("ES123").Value = Sheets("Kalamein Shop").Range("AK58")
+Range("FI123").Value = Sheets("Assembly").Range("AK58")
+Range("FI124").Value = Sheets("Assembly").Range("AK59")
+Range("FW123").Value = Sheets("Prehang").Range("AK58")
+Range("FW124").Value = Sheets("Prehang").Range("AK59")
+
+ElseIf Range("DB59") <> "" Then
+
+Range("ER123").Value = ""
+Range("ES123").Value = ""
+Range("FI123").Value = ""
+Range("FI124").Value = ""
+Range("FW123").Value = ""
+Range("FW124").Value = ""
+
+End If
+
+End Sub
+Sub KeepWork150()
+
+'126
+If Range("DW11") = "" Then
+
+Range("EU75").Value = Sheets("Kalamein Shop").Range("AQ10")
+Range("EV75").Value = Sheets("Kalamein Shop").Range("AR10")
+Range("FK75").Value = Sheets("Assembly").Range("AR10")
+Range("FK76").Value = Sheets("Assembly").Range("AR11")
+Range("FY75").Value = Sheets("Prehang").Range("AR10")
+Range("FY76").Value = Sheets("Prehang").Range("AR11")
+
+ElseIf Range("DW11") <> "" Then
+
+Range("EU75").Value = ""
+Range("EV75").Value = ""
+Range("FK75").Value = ""
+Range("FK76").Value = ""
+Range("FY75").Value = ""
+Range("FY76").Value = ""
+
+End If
+
+'127
+If Range("DW13") = "" Then
+
+Range("EU77").Value = Sheets("Kalamein Shop").Range("AQ12")
+Range("EV77").Value = Sheets("Kalamein Shop").Range("AR12")
+Range("FK77").Value = Sheets("Assembly").Range("AR12")
+Range("FK78").Value = Sheets("Assembly").Range("AR13")
+Range("FY77").Value = Sheets("Prehang").Range("AR12")
+Range("FY78").Value = Sheets("Prehang").Range("AR13")
+
+ElseIf Range("DW13") <> "" Then
+
+Range("EU77").Value = ""
+Range("EV77").Value = ""
+Range("FK77").Value = ""
+Range("FK78").Value = ""
+Range("FY77").Value = ""
+Range("FY78").Value = ""
+
+End If
+
+'128
+If Range("DW15") = "" Then
+
+Range("EU79").Value = Sheets("Kalamein Shop").Range("AQ14")
+Range("EV79").Value = Sheets("Kalamein Shop").Range("AR14")
+Range("FK79").Value = Sheets("Assembly").Range("AR14")
+Range("FK80").Value = Sheets("Assembly").Range("AR15")
+Range("FY79").Value = Sheets("Prehang").Range("AR14")
+Range("FY80").Value = Sheets("Prehang").Range("AR15")
+
+ElseIf Range("DW15") <> "" Then
+
+Range("EU79").Value = ""
+Range("EV79").Value = ""
+Range("FK79").Value = ""
+Range("FK80").Value = ""
+Range("FY79").Value = ""
+Range("FY80").Value = ""
+
+End If
+
+'129
+If Range("DW17") = "" Then
+
+Range("EU81").Value = Sheets("Kalamein Shop").Range("AQ16")
+Range("EV81").Value = Sheets("Kalamein Shop").Range("AR16")
+Range("FK81").Value = Sheets("Assembly").Range("AR16")
+Range("FK82").Value = Sheets("Assembly").Range("AR17")
+Range("FY81").Value = Sheets("Prehang").Range("AR16")
+Range("FY82").Value = Sheets("Prehang").Range("AR17")
+
+ElseIf Range("DW17") <> "" Then
+
+Range("EU81").Value = ""
+Range("EV81").Value = ""
+Range("FK81").Value = ""
+Range("FK82").Value = ""
+Range("FY81").Value = ""
+Range("FY82").Value = ""
+
+End If
+
+'130
+If Range("DW19") = "" Then
+
+Range("EU83").Value = Sheets("Kalamein Shop").Range("AQ18")
+Range("EV83").Value = Sheets("Kalamein Shop").Range("AR18")
+Range("FK83").Value = Sheets("Assembly").Range("AR18")
+Range("FK84").Value = Sheets("Assembly").Range("AR19")
+Range("FY83").Value = Sheets("Prehang").Range("AR18")
+Range("FY84").Value = Sheets("Prehang").Range("AR19")
+
+ElseIf Range("DW19") <> "" Then
+
+Range("EU83").Value = ""
+Range("EV83").Value = ""
+Range("FK83").Value = ""
+Range("FK84").Value = ""
+Range("FY83").Value = ""
+Range("FY84").Value = ""
+
+End If
+
+'131
+If Range("DW21") = "" Then
+
+Range("EU85").Value = Sheets("Kalamein Shop").Range("AQ20")
+Range("EV85").Value = Sheets("Kalamein Shop").Range("AR20")
+Range("FK85").Value = Sheets("Assembly").Range("AR20")
+Range("FK86").Value = Sheets("Assembly").Range("AR21")
+Range("FY85").Value = Sheets("Prehang").Range("AR20")
+Range("FY86").Value = Sheets("Prehang").Range("AR21")
+
+ElseIf Range("DW21") <> "" Then
+
+Range("EU85").Value = ""
+Range("EV85").Value = ""
+Range("FK85").Value = ""
+Range("FK86").Value = ""
+Range("FY85").Value = ""
+Range("FY86").Value = ""
+
+End If
+
+'132
+If Range("DW23") = "" Then
+
+Range("EU87").Value = Sheets("Kalamein Shop").Range("AQ22")
+Range("EV87").Value = Sheets("Kalamein Shop").Range("AR22")
+Range("FK87").Value = Sheets("Assembly").Range("AR22")
+Range("FK88").Value = Sheets("Assembly").Range("AR23")
+Range("FY87").Value = Sheets("Prehang").Range("AR22")
+Range("FY88").Value = Sheets("Prehang").Range("AR23")
+
+ElseIf Range("DW23") <> "" Then
+
+Range("EU87").Value = ""
+Range("EV87").Value = ""
+Range("FK87").Value = ""
+Range("FK88").Value = ""
+Range("FY87").Value = ""
+Range("FY88").Value = ""
+
+End If
+
+'133
+If Range("DW25") = "" Then
+
+Range("EU89").Value = Sheets("Kalamein Shop").Range("AQ24")
+Range("EV89").Value = Sheets("Kalamein Shop").Range("AR24")
+Range("FK89").Value = Sheets("Assembly").Range("AR24")
+Range("FK90").Value = Sheets("Assembly").Range("AR25")
+Range("FY89").Value = Sheets("Prehang").Range("AR24")
+Range("FY90").Value = Sheets("Prehang").Range("AR25")
+
+ElseIf Range("DW25") <> "" Then
+
+Range("EU89").Value = ""
+Range("EV89").Value = ""
+Range("FK89").Value = ""
+Range("FK90").Value = ""
+Range("FY89").Value = ""
+Range("FY90").Value = ""
+
+End If
+
+'134
+If Range("DW27") = "" Then
+
+Range("EU91").Value = Sheets("Kalamein Shop").Range("AQ26")
+Range("EV91").Value = Sheets("Kalamein Shop").Range("AR26")
+Range("FK91").Value = Sheets("Assembly").Range("AR26")
+Range("FK92").Value = Sheets("Assembly").Range("AR27")
+Range("FY91").Value = Sheets("Prehang").Range("AR26")
+Range("FY92").Value = Sheets("Prehang").Range("AR27")
+
+ElseIf Range("DW27") <> "" Then
+
+Range("EU91").Value = ""
+Range("EV91").Value = ""
+Range("FK91").Value = ""
+Range("FK92").Value = ""
+Range("FY91").Value = ""
+Range("FY92").Value = ""
+
+End If
+
+'135
+If Range("DW29") = "" Then
+
+Range("EU93").Value = Sheets("Kalamein Shop").Range("AQ28")
+Range("EV93").Value = Sheets("Kalamein Shop").Range("AR28")
+Range("FK93").Value = Sheets("Assembly").Range("AR28")
+Range("FK94").Value = Sheets("Assembly").Range("AR29")
+Range("FY93").Value = Sheets("Prehang").Range("AR28")
+Range("FY94").Value = Sheets("Prehang").Range("AR29")
+
+ElseIf Range("DW29") <> "" Then
+
+Range("EU93").Value = ""
+Range("EV93").Value = ""
+Range("FK93").Value = ""
+Range("FK94").Value = ""
+Range("FY93").Value = ""
+Range("FY94").Value = ""
+
+End If
+
+'136
+If Range("DW31") = "" Then
+
+Range("EU95").Value = Sheets("Kalamein Shop").Range("AQ30")
+Range("EV95").Value = Sheets("Kalamein Shop").Range("AR30")
+Range("FK95").Value = Sheets("Assembly").Range("AR30")
+Range("FK96").Value = Sheets("Assembly").Range("AR31")
+Range("FY95").Value = Sheets("Prehang").Range("AR30")
+Range("FY96").Value = Sheets("Prehang").Range("AR31")
+
+ElseIf Range("DW31") <> "" Then
+
+Range("EU95").Value = ""
+Range("EV95").Value = ""
+Range("FK95").Value = ""
+Range("FK96").Value = ""
+Range("FY95").Value = ""
+Range("FY96").Value = ""
+
+End If
+
+'137
+If Range("DW33") = "" Then
+
+Range("EU97").Value = Sheets("Kalamein Shop").Range("AQ32")
+Range("EV97").Value = Sheets("Kalamein Shop").Range("AR32")
+Range("FK97").Value = Sheets("Assembly").Range("AR32")
+Range("FK98").Value = Sheets("Assembly").Range("AR33")
+Range("FY97").Value = Sheets("Prehang").Range("AR32")
+Range("FY98").Value = Sheets("Prehang").Range("AR33")
+
+ElseIf Range("DW33") <> "" Then
+
+Range("EU97").Value = ""
+Range("EV97").Value = ""
+Range("FK97").Value = ""
+Range("FK98").Value = ""
+Range("FY97").Value = ""
+Range("FY98").Value = ""
+
+End If
+
+'138
+If Range("DW35") = "" Then
+
+Range("EU99").Value = Sheets("Kalamein Shop").Range("AQ34")
+Range("EV99").Value = Sheets("Kalamein Shop").Range("AR34")
+Range("FK99").Value = Sheets("Assembly").Range("AR34")
+Range("FK100").Value = Sheets("Assembly").Range("AR35")
+Range("FY99").Value = Sheets("Prehang").Range("AR34")
+Range("FY100").Value = Sheets("Prehang").Range("AR35")
+
+ElseIf Range("DW35") <> "" Then
+
+Range("EU99").Value = ""
+Range("EV99").Value = ""
+Range("FK99").Value = ""
+Range("FK100").Value = ""
+Range("FY99").Value = ""
+Range("FY100").Value = ""
+
+End If
+
+'139
+If Range("DW37") = "" Then
+
+Range("EU101").Value = Sheets("Kalamein Shop").Range("AQ36")
+Range("EV101").Value = Sheets("Kalamein Shop").Range("AR36")
+Range("FK101").Value = Sheets("Assembly").Range("AR36")
+Range("FK102").Value = Sheets("Assembly").Range("AR37")
+Range("FY101").Value = Sheets("Prehang").Range("AR36")
+Range("FY102").Value = Sheets("Prehang").Range("AR37")
+
+ElseIf Range("DW37") <> "" Then
+
+Range("EU101").Value = ""
+Range("EV101").Value = ""
+Range("FK101").Value = ""
+Range("FK102").Value = ""
+Range("FY101").Value = ""
+Range("FY102").Value = ""
+
+End If
+
+'140
+If Range("DW39") = "" Then
+
+Range("EU103").Value = Sheets("Kalamein Shop").Range("AQ38")
+Range("EV103").Value = Sheets("Kalamein Shop").Range("AR38")
+Range("FK103").Value = Sheets("Assembly").Range("AR38")
+Range("FK104").Value = Sheets("Assembly").Range("AR39")
+Range("FY103").Value = Sheets("Prehang").Range("AR38")
+Range("FY104").Value = Sheets("Prehang").Range("AR39")
+
+ElseIf Range("DW39") <> "" Then
+
+Range("EU103").Value = ""
+Range("EV103").Value = ""
+Range("FK103").Value = ""
+Range("FK104").Value = ""
+Range("FY103").Value = ""
+Range("FY104").Value = ""
+
+End If
+
+'141
+If Range("DW41") = "" Then
+
+Range("EU105").Value = Sheets("Kalamein Shop").Range("AQ40")
+Range("EV105").Value = Sheets("Kalamein Shop").Range("AR40")
+Range("FK105").Value = Sheets("Assembly").Range("AR40")
+Range("FK106").Value = Sheets("Assembly").Range("AR41")
+Range("FY105").Value = Sheets("Prehang").Range("AR40")
+Range("FY106").Value = Sheets("Prehang").Range("AR41")
+
+ElseIf Range("DW41") <> "" Then
+
+Range("EU105").Value = ""
+Range("EV105").Value = ""
+Range("FK105").Value = ""
+Range("FK106").Value = ""
+Range("FY105").Value = ""
+Range("FY106").Value = ""
+
+End If
+
+'142
+If Range("DW43") = "" Then
+
+Range("EU107").Value = Sheets("Kalamein Shop").Range("AQ42")
+Range("EV107").Value = Sheets("Kalamein Shop").Range("AR42")
+Range("FK107").Value = Sheets("Assembly").Range("AR42")
+Range("FK108").Value = Sheets("Assembly").Range("AR43")
+Range("FY107").Value = Sheets("Prehang").Range("AR42")
+Range("FY108").Value = Sheets("Prehang").Range("AR43")
+
+ElseIf Range("DW43") <> "" Then
+
+Range("EU107").Value = ""
+Range("EV107").Value = ""
+Range("FK107").Value = ""
+Range("FK108").Value = ""
+Range("FY107").Value = ""
+Range("FY108").Value = ""
+
+End If
+
+'143
+If Range("DW45") = "" Then
+
+Range("EU109").Value = Sheets("Kalamein Shop").Range("AQ44")
+Range("EV109").Value = Sheets("Kalamein Shop").Range("AR44")
+Range("FK109").Value = Sheets("Assembly").Range("AR44")
+Range("FK110").Value = Sheets("Assembly").Range("AR45")
+Range("FY109").Value = Sheets("Prehang").Range("AR44")
+Range("FY110").Value = Sheets("Prehang").Range("AR45")
+
+ElseIf Range("DW45") <> "" Then
+
+Range("EU109").Value = ""
+Range("EV109").Value = ""
+Range("FK109").Value = ""
+Range("FK110").Value = ""
+Range("FY109").Value = ""
+Range("FY110").Value = ""
+
+End If
+
+'144
+If Range("DW47") = "" Then
+
+Range("EU111").Value = Sheets("Kalamein Shop").Range("AQ46")
+Range("EV111").Value = Sheets("Kalamein Shop").Range("AR46")
+Range("FK111").Value = Sheets("Assembly").Range("AR46")
+Range("FK112").Value = Sheets("Assembly").Range("AR47")
+Range("FY111").Value = Sheets("Prehang").Range("AR46")
+Range("FY112").Value = Sheets("Prehang").Range("AR47")
+
+ElseIf Range("DW47") <> "" Then
+
+Range("EU111").Value = ""
+Range("EV111").Value = ""
+Range("FK111").Value = ""
+Range("FK112").Value = ""
+Range("FY111").Value = ""
+Range("FY112").Value = ""
+
+End If
+
+'145
+If Range("DW49") = "" Then
+
+Range("EU113").Value = Sheets("Kalamein Shop").Range("AQ48")
+Range("EV113").Value = Sheets("Kalamein Shop").Range("AR48")
+Range("FK113").Value = Sheets("Assembly").Range("AR48")
+Range("FK114").Value = Sheets("Assembly").Range("AR49")
+Range("FY113").Value = Sheets("Prehang").Range("AR48")
+Range("FY114").Value = Sheets("Prehang").Range("AR49")
+
+ElseIf Range("DW49") <> "" Then
+
+Range("EU113").Value = ""
+Range("EV113").Value = ""
+Range("FK113").Value = ""
+Range("FK114").Value = ""
+Range("FY113").Value = ""
+Range("FY114").Value = ""
+
+End If
+
+'146
+If Range("DW51") = "" Then
+
+Range("EU115").Value = Sheets("Kalamein Shop").Range("AQ50")
+Range("EV115").Value = Sheets("Kalamein Shop").Range("AR50")
+Range("FK115").Value = Sheets("Assembly").Range("AR50")
+Range("FK116").Value = Sheets("Assembly").Range("AR51")
+Range("FY115").Value = Sheets("Prehang").Range("AR50")
+Range("FY116").Value = Sheets("Prehang").Range("AR51")
+
+ElseIf Range("DW51") <> "" Then
+
+Range("EU115").Value = ""
+Range("EV115").Value = ""
+Range("FK115").Value = ""
+Range("FK116").Value = ""
+Range("FY115").Value = ""
+Range("FY116").Value = ""
+
+End If
+
+'147
+If Range("DW53") = "" Then
+
+Range("EU117").Value = Sheets("Kalamein Shop").Range("AQ52")
+Range("EV117").Value = Sheets("Kalamein Shop").Range("AR52")
+Range("FK117").Value = Sheets("Assembly").Range("AR52")
+Range("FK118").Value = Sheets("Assembly").Range("AR53")
+Range("FY117").Value = Sheets("Prehang").Range("AR52")
+Range("FY118").Value = Sheets("Prehang").Range("AR53")
+
+ElseIf Range("DW53") <> "" Then
+
+Range("EU117").Value = ""
+Range("EV117").Value = ""
+Range("FK117").Value = ""
+Range("FK118").Value = ""
+Range("FY117").Value = ""
+Range("FY118").Value = ""
+
+End If
+
+'148
+If Range("DW55") = "" Then
+
+Range("EU119").Value = Sheets("Kalamein Shop").Range("AQ54")
+Range("EV119").Value = Sheets("Kalamein Shop").Range("AR54")
+Range("FK119").Value = Sheets("Assembly").Range("AR54")
+Range("FK120").Value = Sheets("Assembly").Range("AR55")
+Range("FY119").Value = Sheets("Prehang").Range("AR54")
+Range("FY120").Value = Sheets("Prehang").Range("AR55")
+
+ElseIf Range("DW55") <> "" Then
+
+Range("EU119").Value = ""
+Range("EV119").Value = ""
+Range("FK119").Value = ""
+Range("FK120").Value = ""
+Range("FY119").Value = ""
+Range("FY120").Value = ""
+
+End If
+
+'149
+If Range("DW57") = "" Then
+
+Range("EU121").Value = Sheets("Kalamein Shop").Range("AQ56")
+Range("EV121").Value = Sheets("Kalamein Shop").Range("AR56")
+Range("FK121").Value = Sheets("Assembly").Range("AR56")
+Range("FK122").Value = Sheets("Assembly").Range("AR57")
+Range("FY121").Value = Sheets("Prehang").Range("AR56")
+Range("FY122").Value = Sheets("Prehang").Range("AR57")
+
+ElseIf Range("DW57") <> "" Then
+
+Range("EU121").Value = ""
+Range("EV121").Value = ""
+Range("FK121").Value = ""
+Range("FK122").Value = ""
+Range("FY121").Value = ""
+Range("FY122").Value = ""
+
+End If
+
+'150
+If Range("DW59") = "" Then
+
+Range("EU123").Value = Sheets("Kalamein Shop").Range("AQ58")
+Range("EV123").Value = Sheets("Kalamein Shop").Range("AR58")
+Range("FK123").Value = Sheets("Assembly").Range("AR58")
+Range("FK124").Value = Sheets("Assembly").Range("AR59")
+Range("FY123").Value = Sheets("Prehang").Range("AR58")
+Range("FY124").Value = Sheets("Prehang").Range("AR59")
+
+ElseIf Range("DW59") <> "" Then
+
+Range("EU123").Value = ""
+Range("EV123").Value = ""
+Range("FK123").Value = ""
+Range("FK124").Value = ""
+Range("FY123").Value = ""
+Range("FY124").Value = ""
+
+End If
+
+End Sub
+Sub KeepWork252()
+
+'1
+Sheets("Kalamein Shop").Range("H10").Value = Range("EF75")
+Sheets("Kalamein Shop").Range("I10").Value = Range("EG75")
+Sheets("Assembly").Range("I10").Value = Range("FA75")
+Sheets("Assembly").Range("I11").Value = Range("FA76")
+Sheets("Prehang").Range("I10").Value = Range("FO75")
+Sheets("Prehang").Range("I11").Value = Range("FO76")
+
+'2
+Sheets("Kalamein Shop").Range("H12").Value = Range("EF77")
+Sheets("Kalamein Shop").Range("I12").Value = Range("EG77")
+Sheets("Assembly").Range("I12").Value = Range("FA77")
+Sheets("Assembly").Range("I13").Value = Range("FA78")
+Sheets("Prehang").Range("I12").Value = Range("FO77")
+Sheets("Prehang").Range("I13").Value = Range("FO78")
+
+'3
+Sheets("Kalamein Shop").Range("H14").Value = Range("EF79")
+Sheets("Kalamein Shop").Range("I14").Value = Range("EG79")
+Sheets("Assembly").Range("I14").Value = Range("FA79")
+Sheets("Assembly").Range("I15").Value = Range("FA80")
+Sheets("Prehang").Range("I14").Value = Range("FO79")
+Sheets("Prehang").Range("I15").Value = Range("FO80")
+
+'4
+Sheets("Kalamein Shop").Range("H16").Value = Range("EF81")
+Sheets("Kalamein Shop").Range("I16").Value = Range("EG81")
+Sheets("Assembly").Range("I16").Value = Range("FA81")
+Sheets("Assembly").Range("I17").Value = Range("FA82")
+Sheets("Prehang").Range("I16").Value = Range("FO81")
+Sheets("Prehang").Range("I17").Value = Range("FO82")
+
+'5
+Sheets("Kalamein Shop").Range("H18").Value = Range("EF83")
+Sheets("Kalamein Shop").Range("I18").Value = Range("EG83")
+Sheets("Assembly").Range("I18").Value = Range("FA83")
+Sheets("Assembly").Range("I19").Value = Range("FA84")
+Sheets("Prehang").Range("I18").Value = Range("FO83")
+Sheets("Prehang").Range("I19").Value = Range("FO84")
+
+'6
+Sheets("Kalamein Shop").Range("H20").Value = Range("EF85")
+Sheets("Kalamein Shop").Range("I20").Value = Range("EG85")
+Sheets("Assembly").Range("I20").Value = Range("FA85")
+Sheets("Assembly").Range("I21").Value = Range("FA86")
+Sheets("Prehang").Range("I20").Value = Range("FO85")
+Sheets("Prehang").Range("I21").Value = Range("FO86")
+
+'7
+Sheets("Kalamein Shop").Range("H22").Value = Range("EF87")
+Sheets("Kalamein Shop").Range("I22").Value = Range("EG87")
+Sheets("Assembly").Range("I22").Value = Range("FA87")
+Sheets("Assembly").Range("I23").Value = Range("FA88")
+Sheets("Prehang").Range("I22").Value = Range("FO87")
+Sheets("Prehang").Range("I23").Value = Range("FO88")
+
+'8
+Sheets("Kalamein Shop").Range("H24").Value = Range("EF89")
+Sheets("Kalamein Shop").Range("I24").Value = Range("EG89")
+Sheets("Assembly").Range("I24").Value = Range("FA89")
+Sheets("Assembly").Range("I25").Value = Range("FA90")
+Sheets("Prehang").Range("I24").Value = Range("FO89")
+Sheets("Prehang").Range("I25").Value = Range("FO90")
+
+'9
+Sheets("Kalamein Shop").Range("H26").Value = Range("EF91")
+Sheets("Kalamein Shop").Range("I26").Value = Range("EG91")
+Sheets("Assembly").Range("I26").Value = Range("FA91")
+Sheets("Assembly").Range("I27").Value = Range("FA92")
+Sheets("Prehang").Range("I26").Value = Range("FO91")
+Sheets("Prehang").Range("I27").Value = Range("FO92")
+
+'10
+Sheets("Kalamein Shop").Range("H28").Value = Range("EF93")
+Sheets("Kalamein Shop").Range("I28").Value = Range("EG93")
+Sheets("Assembly").Range("I28").Value = Range("FA93")
+Sheets("Assembly").Range("I29").Value = Range("FA94")
+Sheets("Prehang").Range("I28").Value = Range("FO93")
+Sheets("Prehang").Range("I29").Value = Range("FO94")
+
+'11
+Sheets("Kalamein Shop").Range("H30").Value = Range("EF95")
+Sheets("Kalamein Shop").Range("I30").Value = Range("EG95")
+Sheets("Assembly").Range("I30").Value = Range("FA95")
+Sheets("Assembly").Range("I31").Value = Range("FA96")
+Sheets("Prehang").Range("I30").Value = Range("FO95")
+Sheets("Prehang").Range("I31").Value = Range("FO96")
+
+'12
+Sheets("Kalamein Shop").Range("H32").Value = Range("EF97")
+Sheets("Kalamein Shop").Range("I32").Value = Range("EG97")
+Sheets("Assembly").Range("I32").Value = Range("FA97")
+Sheets("Assembly").Range("I33").Value = Range("FA98")
+Sheets("Prehang").Range("I32").Value = Range("FO97")
+Sheets("Prehang").Range("I33").Value = Range("FO98")
+
+'13
+Sheets("Kalamein Shop").Range("H34").Value = Range("EF99")
+Sheets("Kalamein Shop").Range("I34").Value = Range("EG99")
+Sheets("Assembly").Range("I34").Value = Range("FA99")
+Sheets("Assembly").Range("I35").Value = Range("FA100")
+Sheets("Prehang").Range("I34").Value = Range("FO99")
+Sheets("Prehang").Range("I35").Value = Range("FO100")
+
+'14
+Sheets("Kalamein Shop").Range("H36").Value = Range("EF101")
+Sheets("Kalamein Shop").Range("I36").Value = Range("EG101")
+Sheets("Assembly").Range("I36").Value = Range("FA101")
+Sheets("Assembly").Range("I37").Value = Range("FA102")
+Sheets("Prehang").Range("I36").Value = Range("FO101")
+Sheets("Prehang").Range("I37").Value = Range("FO102")
+
+'15
+Sheets("Kalamein Shop").Range("H38").Value = Range("EF103")
+Sheets("Kalamein Shop").Range("I38").Value = Range("EG103")
+Sheets("Assembly").Range("I38").Value = Range("FA103")
+Sheets("Assembly").Range("I39").Value = Range("FA104")
+Sheets("Prehang").Range("I38").Value = Range("FO103")
+Sheets("Prehang").Range("I39").Value = Range("FO104")
+
+'16
+Sheets("Kalamein Shop").Range("H40").Value = Range("EF105")
+Sheets("Kalamein Shop").Range("I40").Value = Range("EG105")
+Sheets("Assembly").Range("I40").Value = Range("FA105")
+Sheets("Assembly").Range("I41").Value = Range("FA106")
+Sheets("Prehang").Range("I40").Value = Range("FO105")
+Sheets("Prehang").Range("I41").Value = Range("FO106")
+
+'17
+Sheets("Kalamein Shop").Range("H42").Value = Range("EF107")
+Sheets("Kalamein Shop").Range("I42").Value = Range("EG107")
+Sheets("Assembly").Range("I42").Value = Range("FA107")
+Sheets("Assembly").Range("I43").Value = Range("FA108")
+Sheets("Prehang").Range("I42").Value = Range("FO107")
+Sheets("Prehang").Range("I43").Value = Range("FO108")
+
+'18
+Sheets("Kalamein Shop").Range("H44").Value = Range("EF109")
+Sheets("Kalamein Shop").Range("I44").Value = Range("EG109")
+Sheets("Assembly").Range("I44").Value = Range("FA109")
+Sheets("Assembly").Range("I45").Value = Range("FA110")
+Sheets("Prehang").Range("I44").Value = Range("FO109")
+Sheets("Prehang").Range("I45").Value = Range("FO110")
+
+'19
+Sheets("Kalamein Shop").Range("H46").Value = Range("EF111")
+Sheets("Kalamein Shop").Range("I46").Value = Range("EG111")
+Sheets("Assembly").Range("I46").Value = Range("FA111")
+Sheets("Assembly").Range("I47").Value = Range("FA112")
+Sheets("Prehang").Range("I46").Value = Range("FO111")
+Sheets("Prehang").Range("I47").Value = Range("FO112")
+
+'20
+Sheets("Kalamein Shop").Range("H48").Value = Range("EF113")
+Sheets("Kalamein Shop").Range("I48").Value = Range("EG113")
+Sheets("Assembly").Range("I48").Value = Range("FA113")
+Sheets("Assembly").Range("I49").Value = Range("FA114")
+Sheets("Prehang").Range("I48").Value = Range("FO113")
+Sheets("Prehang").Range("I49").Value = Range("FO114")
+
+'21
+Sheets("Kalamein Shop").Range("H50").Value = Range("EF115")
+Sheets("Kalamein Shop").Range("I50").Value = Range("EG115")
+Sheets("Assembly").Range("I50").Value = Range("FA115")
+Sheets("Assembly").Range("I51").Value = Range("FA116")
+Sheets("Prehang").Range("I50").Value = Range("FO115")
+Sheets("Prehang").Range("I51").Value = Range("FO116")
+
+'22
+Sheets("Kalamein Shop").Range("H52").Value = Range("EF117")
+Sheets("Kalamein Shop").Range("I52").Value = Range("EG117")
+Sheets("Assembly").Range("I52").Value = Range("FA117")
+Sheets("Assembly").Range("I53").Value = Range("FA118")
+Sheets("Prehang").Range("I52").Value = Range("FO117")
+Sheets("Prehang").Range("I53").Value = Range("FO118")
+
+'23
+Sheets("Kalamein Shop").Range("H54").Value = Range("EF119")
+Sheets("Kalamein Shop").Range("I54").Value = Range("EG119")
+Sheets("Assembly").Range("I54").Value = Range("FA119")
+Sheets("Assembly").Range("I55").Value = Range("FA120")
+Sheets("Prehang").Range("I54").Value = Range("FO119")
+Sheets("Prehang").Range("I55").Value = Range("FO120")
+
+'24
+Sheets("Kalamein Shop").Range("H56").Value = Range("EF121")
+Sheets("Kalamein Shop").Range("I56").Value = Range("EG121")
+Sheets("Assembly").Range("I56").Value = Range("FA121")
+Sheets("Assembly").Range("I57").Value = Range("FA122")
+Sheets("Prehang").Range("I56").Value = Range("FO121")
+Sheets("Prehang").Range("I57").Value = Range("FO122")
+
+'25
+Sheets("Kalamein Shop").Range("H58").Value = Range("EF123")
+Sheets("Kalamein Shop").Range("I58").Value = Range("EG123")
+Sheets("Assembly").Range("I58").Value = Range("FA123")
+Sheets("Assembly").Range("I59").Value = Range("FA124")
+Sheets("Prehang").Range("I58").Value = Range("FO123")
+Sheets("Prehang").Range("I59").Value = Range("FO124")
+
+End Sub
+Sub KeepWork502()
+
+'26
+Sheets("Kalamein Shop").Range("O10").Value = Range("EI75")
+Sheets("Kalamein Shop").Range("P10").Value = Range("EJ75")
+Sheets("Assembly").Range("P10").Value = Range("FC75")
+Sheets("Assembly").Range("P11").Value = Range("FC76")
+Sheets("Prehang").Range("P10").Value = Range("FQ75")
+Sheets("Prehang").Range("P11").Value = Range("FQ76")
+
+'27
+Sheets("Kalamein Shop").Range("O12").Value = Range("EI77")
+Sheets("Kalamein Shop").Range("P12").Value = Range("EJ77")
+Sheets("Assembly").Range("P12").Value = Range("FC77")
+Sheets("Assembly").Range("P13").Value = Range("FC78")
+Sheets("Prehang").Range("P12").Value = Range("FQ77")
+Sheets("Prehang").Range("P13").Value = Range("FQ78")
+
+'28
+Sheets("Kalamein Shop").Range("O14").Value = Range("EI79")
+Sheets("Kalamein Shop").Range("P14").Value = Range("EJ79")
+Sheets("Assembly").Range("P14").Value = Range("FC79")
+Sheets("Assembly").Range("P15").Value = Range("FC80")
+Sheets("Prehang").Range("P14").Value = Range("FQ79")
+Sheets("Prehang").Range("P15").Value = Range("FQ80")
+
+'29
+Sheets("Kalamein Shop").Range("O16").Value = Range("EI81")
+Sheets("Kalamein Shop").Range("P16").Value = Range("EJ81")
+Sheets("Assembly").Range("P16").Value = Range("FC81")
+Sheets("Assembly").Range("P17").Value = Range("FC82")
+Sheets("Prehang").Range("P16").Value = Range("FQ81")
+Sheets("Prehang").Range("P17").Value = Range("FQ82")
+
+'30
+Sheets("Kalamein Shop").Range("O18").Value = Range("EI83")
+Sheets("Kalamein Shop").Range("P18").Value = Range("EJ83")
+Sheets("Assembly").Range("P18").Value = Range("FC83")
+Sheets("Assembly").Range("P19").Value = Range("FC84")
+Sheets("Prehang").Range("P18").Value = Range("FQ83")
+Sheets("Prehang").Range("P19").Value = Range("FQ84")
+
+'31
+Sheets("Kalamein Shop").Range("O20").Value = Range("EI85")
+Sheets("Kalamein Shop").Range("P20").Value = Range("EJ85")
+Sheets("Assembly").Range("P20").Value = Range("FC85")
+Sheets("Assembly").Range("P21").Value = Range("FC86")
+Sheets("Prehang").Range("P20").Value = Range("FQ85")
+Sheets("Prehang").Range("P21").Value = Range("FQ86")
+
+'32
+Sheets("Kalamein Shop").Range("O22").Value = Range("EI87")
+Sheets("Kalamein Shop").Range("P22").Value = Range("EJ87")
+Sheets("Assembly").Range("P22").Value = Range("FC87")
+Sheets("Assembly").Range("P23").Value = Range("FC88")
+Sheets("Prehang").Range("P22").Value = Range("FQ87")
+Sheets("Prehang").Range("P23").Value = Range("FQ88")
+
+'33
+Sheets("Kalamein Shop").Range("O24").Value = Range("EI89")
+Sheets("Kalamein Shop").Range("P24").Value = Range("EJ89")
+Sheets("Assembly").Range("P24").Value = Range("FC89")
+Sheets("Assembly").Range("P25").Value = Range("FC90")
+Sheets("Prehang").Range("P24").Value = Range("FQ89")
+Sheets("Prehang").Range("P25").Value = Range("FQ90")
+
+'34
+Sheets("Kalamein Shop").Range("O26").Value = Range("EI91")
+Sheets("Kalamein Shop").Range("P26").Value = Range("EJ91")
+Sheets("Assembly").Range("P26").Value = Range("FC91")
+Sheets("Assembly").Range("P27").Value = Range("FC92")
+Sheets("Prehang").Range("P26").Value = Range("FQ91")
+Sheets("Prehang").Range("P27").Value = Range("FQ92")
+
+'35
+Sheets("Kalamein Shop").Range("O28").Value = Range("EI93")
+Sheets("Kalamein Shop").Range("P28").Value = Range("EJ93")
+Sheets("Assembly").Range("P28").Value = Range("FC93")
+Sheets("Assembly").Range("P29").Value = Range("FC94")
+Sheets("Prehang").Range("P28").Value = Range("FQ93")
+Sheets("Prehang").Range("P29").Value = Range("FQ94")
+
+'36
+Sheets("Kalamein Shop").Range("O30").Value = Range("EI95")
+Sheets("Kalamein Shop").Range("P30").Value = Range("EJ95")
+Sheets("Assembly").Range("P30").Value = Range("FC95")
+Sheets("Assembly").Range("P31").Value = Range("FC96")
+Sheets("Prehang").Range("P30").Value = Range("FQ95")
+Sheets("Prehang").Range("P31").Value = Range("FQ96")
+
+'37
+Sheets("Kalamein Shop").Range("O32").Value = Range("EI97")
+Sheets("Kalamein Shop").Range("P32").Value = Range("EJ97")
+Sheets("Assembly").Range("P32").Value = Range("FC97")
+Sheets("Assembly").Range("P33").Value = Range("FC98")
+Sheets("Prehang").Range("P32").Value = Range("FQ97")
+Sheets("Prehang").Range("P33").Value = Range("FQ98")
+
+'38
+Sheets("Kalamein Shop").Range("O34").Value = Range("EI99")
+Sheets("Kalamein Shop").Range("P34").Value = Range("EJ99")
+Sheets("Assembly").Range("P34").Value = Range("FC99")
+Sheets("Assembly").Range("P35").Value = Range("FC100")
+Sheets("Prehang").Range("P34").Value = Range("FQ99")
+Sheets("Prehang").Range("P35").Value = Range("FQ100")
+
+'39
+Sheets("Kalamein Shop").Range("O36").Value = Range("EI101")
+Sheets("Kalamein Shop").Range("P36").Value = Range("EJ101")
+Sheets("Assembly").Range("P36").Value = Range("FC101")
+Sheets("Assembly").Range("P37").Value = Range("FC102")
+Sheets("Prehang").Range("P36").Value = Range("FQ101")
+Sheets("Prehang").Range("P37").Value = Range("FQ102")
+
+'40
+Sheets("Kalamein Shop").Range("O38").Value = Range("EI103")
+Sheets("Kalamein Shop").Range("P38").Value = Range("EJ103")
+Sheets("Assembly").Range("P38").Value = Range("FC103")
+Sheets("Assembly").Range("P39").Value = Range("FC104")
+Sheets("Prehang").Range("P38").Value = Range("FQ103")
+Sheets("Prehang").Range("P39").Value = Range("FQ104")
+
+'41
+Sheets("Kalamein Shop").Range("O40").Value = Range("EI105")
+Sheets("Kalamein Shop").Range("P40").Value = Range("EJ105")
+Sheets("Assembly").Range("P40").Value = Range("FC105")
+Sheets("Assembly").Range("P41").Value = Range("FC106")
+Sheets("Prehang").Range("P40").Value = Range("FQ105")
+Sheets("Prehang").Range("P41").Value = Range("FQ106")
+
+'42
+Sheets("Kalamein Shop").Range("O42").Value = Range("EI107")
+Sheets("Kalamein Shop").Range("P42").Value = Range("EJ107")
+Sheets("Assembly").Range("P42").Value = Range("FC107")
+Sheets("Assembly").Range("P43").Value = Range("FC108")
+Sheets("Prehang").Range("P42").Value = Range("FQ107")
+Sheets("Prehang").Range("P43").Value = Range("FQ108")
+
+'43
+Sheets("Kalamein Shop").Range("O44").Value = Range("EI109")
+Sheets("Kalamein Shop").Range("P44").Value = Range("EJ109")
+Sheets("Assembly").Range("P44").Value = Range("FC109")
+Sheets("Assembly").Range("P45").Value = Range("FC110")
+Sheets("Prehang").Range("P44").Value = Range("FQ109")
+Sheets("Prehang").Range("P45").Value = Range("FQ110")
+
+'44
+Sheets("Kalamein Shop").Range("O46").Value = Range("EI111")
+Sheets("Kalamein Shop").Range("P46").Value = Range("EJ111")
+Sheets("Assembly").Range("P46").Value = Range("FC111")
+Sheets("Assembly").Range("P47").Value = Range("FC112")
+Sheets("Prehang").Range("P46").Value = Range("FQ111")
+Sheets("Prehang").Range("P47").Value = Range("FQ112")
+
+'45
+Sheets("Kalamein Shop").Range("O48").Value = Range("EI113")
+Sheets("Kalamein Shop").Range("P48").Value = Range("EJ113")
+Sheets("Assembly").Range("P48").Value = Range("FC113")
+Sheets("Assembly").Range("P49").Value = Range("FC114")
+Sheets("Prehang").Range("P48").Value = Range("FQ113")
+Sheets("Prehang").Range("P49").Value = Range("FQ114")
+
+'46
+Sheets("Kalamein Shop").Range("O50").Value = Range("EI115")
+Sheets("Kalamein Shop").Range("P50").Value = Range("EJ115")
+Sheets("Assembly").Range("P50").Value = Range("FC115")
+Sheets("Assembly").Range("P51").Value = Range("FC116")
+Sheets("Prehang").Range("P50").Value = Range("FQ115")
+Sheets("Prehang").Range("P51").Value = Range("FQ116")
+
+'47
+Sheets("Kalamein Shop").Range("O52").Value = Range("EI117")
+Sheets("Kalamein Shop").Range("P52").Value = Range("EJ117")
+Sheets("Assembly").Range("P52").Value = Range("FC117")
+Sheets("Assembly").Range("P53").Value = Range("FC118")
+Sheets("Prehang").Range("P52").Value = Range("FQ117")
+Sheets("Prehang").Range("P53").Value = Range("FQ118")
+
+'48
+Sheets("Kalamein Shop").Range("O54").Value = Range("EI119")
+Sheets("Kalamein Shop").Range("P54").Value = Range("EJ119")
+Sheets("Assembly").Range("P54").Value = Range("FC119")
+Sheets("Assembly").Range("P55").Value = Range("FC120")
+Sheets("Prehang").Range("P54").Value = Range("FQ119")
+Sheets("Prehang").Range("P55").Value = Range("FQ120")
+
+'49
+Sheets("Kalamein Shop").Range("O56").Value = Range("EI121")
+Sheets("Kalamein Shop").Range("P56").Value = Range("EJ121")
+Sheets("Assembly").Range("P56").Value = Range("FC121")
+Sheets("Assembly").Range("P57").Value = Range("FC122")
+Sheets("Prehang").Range("P56").Value = Range("FQ121")
+Sheets("Prehang").Range("P57").Value = Range("FQ122")
+
+'50
+Sheets("Kalamein Shop").Range("O58").Value = Range("EI123")
+Sheets("Kalamein Shop").Range("P58").Value = Range("EJ123")
+Sheets("Assembly").Range("P58").Value = Range("FC123")
+Sheets("Assembly").Range("P59").Value = Range("FC124")
+Sheets("Prehang").Range("P58").Value = Range("FQ123")
+Sheets("Prehang").Range("P59").Value = Range("FQ124")
+
+End Sub
+Sub KeepWork752()
+
+'51
+Sheets("Kalamein Shop").Range("V10").Value = Range("EL75")
+Sheets("Kalamein Shop").Range("W10").Value = Range("EM75")
+Sheets("Assembly").Range("W10").Value = Range("FE75")
+Sheets("Assembly").Range("W11").Value = Range("FE76")
+Sheets("Prehang").Range("W10").Value = Range("FS75")
+Sheets("Prehang").Range("W11").Value = Range("FS76")
+
+'52
+Sheets("Kalamein Shop").Range("V12").Value = Range("EL77")
+Sheets("Kalamein Shop").Range("W12").Value = Range("EM77")
+Sheets("Assembly").Range("W12").Value = Range("FE77")
+Sheets("Assembly").Range("W13").Value = Range("FE78")
+Sheets("Prehang").Range("W12").Value = Range("FS77")
+Sheets("Prehang").Range("W13").Value = Range("FS78")
+
+'53
+Sheets("Kalamein Shop").Range("V14").Value = Range("EL79")
+Sheets("Kalamein Shop").Range("W14").Value = Range("EM79")
+Sheets("Assembly").Range("W14").Value = Range("FE79")
+Sheets("Assembly").Range("W15").Value = Range("FE80")
+Sheets("Prehang").Range("W14").Value = Range("FS79")
+Sheets("Prehang").Range("W15").Value = Range("FS80")
+
+'54
+Sheets("Kalamein Shop").Range("V16").Value = Range("EL81")
+Sheets("Kalamein Shop").Range("W16").Value = Range("EM81")
+Sheets("Assembly").Range("W16").Value = Range("FE81")
+Sheets("Assembly").Range("W17").Value = Range("FE82")
+Sheets("Prehang").Range("W16").Value = Range("FS81")
+Sheets("Prehang").Range("W17").Value = Range("FS82")
+
+'55
+Sheets("Kalamein Shop").Range("V18").Value = Range("EL83")
+Sheets("Kalamein Shop").Range("W18").Value = Range("EM83")
+Sheets("Assembly").Range("W18").Value = Range("FE83")
+Sheets("Assembly").Range("W19").Value = Range("FE84")
+Sheets("Prehang").Range("W18").Value = Range("FS83")
+Sheets("Prehang").Range("W19").Value = Range("FS84")
+
+'56
+Sheets("Kalamein Shop").Range("V20").Value = Range("EL85")
+Sheets("Kalamein Shop").Range("W20").Value = Range("EM85")
+Sheets("Assembly").Range("W20").Value = Range("FE85")
+Sheets("Assembly").Range("W21").Value = Range("FE86")
+Sheets("Prehang").Range("W20").Value = Range("FS85")
+Sheets("Prehang").Range("W21").Value = Range("FS86")
+
+'57
+Sheets("Kalamein Shop").Range("V22").Value = Range("EL87")
+Sheets("Kalamein Shop").Range("W22").Value = Range("EM87")
+Sheets("Assembly").Range("W22").Value = Range("FE87")
+Sheets("Assembly").Range("W23").Value = Range("FE88")
+Sheets("Prehang").Range("W22").Value = Range("FS87")
+Sheets("Prehang").Range("W23").Value = Range("FS88")
+
+'58
+Sheets("Kalamein Shop").Range("V24").Value = Range("EL89")
+Sheets("Kalamein Shop").Range("W24").Value = Range("EM89")
+Sheets("Assembly").Range("W24").Value = Range("FE89")
+Sheets("Assembly").Range("W25").Value = Range("FE90")
+Sheets("Prehang").Range("W24").Value = Range("FS89")
+Sheets("Prehang").Range("W25").Value = Range("FS90")
+
+'59
+Sheets("Kalamein Shop").Range("V26").Value = Range("EL91")
+Sheets("Kalamein Shop").Range("W26").Value = Range("EM91")
+Sheets("Assembly").Range("W26").Value = Range("FE91")
+Sheets("Assembly").Range("W27").Value = Range("FE92")
+Sheets("Prehang").Range("W26").Value = Range("FS91")
+Sheets("Prehang").Range("W27").Value = Range("FS92")
+
+'60
+Sheets("Kalamein Shop").Range("V28").Value = Range("EL93")
+Sheets("Kalamein Shop").Range("W28").Value = Range("EM93")
+Sheets("Assembly").Range("W28").Value = Range("FE93")
+Sheets("Assembly").Range("W29").Value = Range("FE94")
+Sheets("Prehang").Range("W28").Value = Range("FS93")
+Sheets("Prehang").Range("W29").Value = Range("FS94")
+
+'61
+Sheets("Kalamein Shop").Range("V30").Value = Range("EL95")
+Sheets("Kalamein Shop").Range("W30").Value = Range("EM95")
+Sheets("Assembly").Range("W30").Value = Range("FE95")
+Sheets("Assembly").Range("W31").Value = Range("FE96")
+Sheets("Prehang").Range("W30").Value = Range("FS95")
+Sheets("Prehang").Range("W31").Value = Range("FS96")
+
+'62
+Sheets("Kalamein Shop").Range("V32").Value = Range("EL97")
+Sheets("Kalamein Shop").Range("W32").Value = Range("EM97")
+Sheets("Assembly").Range("W32").Value = Range("FE97")
+Sheets("Assembly").Range("W33").Value = Range("FE98")
+Sheets("Prehang").Range("W32").Value = Range("FS97")
+Sheets("Prehang").Range("W33").Value = Range("FS98")
+
+'63
+Sheets("Kalamein Shop").Range("V34").Value = Range("EL99")
+Sheets("Kalamein Shop").Range("W34").Value = Range("EM99")
+Sheets("Assembly").Range("W34").Value = Range("FE99")
+Sheets("Assembly").Range("W35").Value = Range("FE100")
+Sheets("Prehang").Range("W34").Value = Range("FS99")
+Sheets("Prehang").Range("W35").Value = Range("FS100")
+
+'64
+Sheets("Kalamein Shop").Range("V36").Value = Range("EL101")
+Sheets("Kalamein Shop").Range("W36").Value = Range("EM101")
+Sheets("Assembly").Range("W36").Value = Range("FE101")
+Sheets("Assembly").Range("W37").Value = Range("FE102")
+Sheets("Prehang").Range("W36").Value = Range("FS101")
+Sheets("Prehang").Range("W37").Value = Range("FS102")
+
+'65
+Sheets("Kalamein Shop").Range("V38").Value = Range("EL103")
+Sheets("Kalamein Shop").Range("W38").Value = Range("EM103")
+Sheets("Assembly").Range("W38").Value = Range("FE103")
+Sheets("Assembly").Range("W39").Value = Range("FE104")
+Sheets("Prehang").Range("W38").Value = Range("FS103")
+Sheets("Prehang").Range("W39").Value = Range("FS104")
+
+'66
+Sheets("Kalamein Shop").Range("V40").Value = Range("EL105")
+Sheets("Kalamein Shop").Range("W40").Value = Range("EM105")
+Sheets("Assembly").Range("W40").Value = Range("FE105")
+Sheets("Assembly").Range("W41").Value = Range("FE106")
+Sheets("Prehang").Range("W40").Value = Range("FS105")
+Sheets("Prehang").Range("W41").Value = Range("FS106")
+
+'67
+Sheets("Kalamein Shop").Range("V42").Value = Range("EL107")
+Sheets("Kalamein Shop").Range("W42").Value = Range("EM107")
+Sheets("Assembly").Range("W42").Value = Range("FE107")
+Sheets("Assembly").Range("W43").Value = Range("FE108")
+Sheets("Prehang").Range("W42").Value = Range("FS107")
+Sheets("Prehang").Range("W43").Value = Range("FS108")
+
+'68
+Sheets("Kalamein Shop").Range("V44").Value = Range("EL109")
+Sheets("Kalamein Shop").Range("W44").Value = Range("EM109")
+Sheets("Assembly").Range("W44").Value = Range("FE109")
+Sheets("Assembly").Range("W45").Value = Range("FE110")
+Sheets("Prehang").Range("W44").Value = Range("FS109")
+Sheets("Prehang").Range("W45").Value = Range("FS110")
+
+'69
+Sheets("Kalamein Shop").Range("V46").Value = Range("EL111")
+Sheets("Kalamein Shop").Range("W46").Value = Range("EM111")
+Sheets("Assembly").Range("W46").Value = Range("FE111")
+Sheets("Assembly").Range("W47").Value = Range("FE112")
+Sheets("Prehang").Range("W46").Value = Range("FS111")
+Sheets("Prehang").Range("W47").Value = Range("FS112")
+
+'70
+Sheets("Kalamein Shop").Range("V48").Value = Range("EL113")
+Sheets("Kalamein Shop").Range("W48").Value = Range("EM113")
+Sheets("Assembly").Range("W48").Value = Range("FE113")
+Sheets("Assembly").Range("W49").Value = Range("FE114")
+Sheets("Prehang").Range("W48").Value = Range("FS113")
+Sheets("Prehang").Range("W49").Value = Range("FS114")
+
+'71
+Sheets("Kalamein Shop").Range("V50").Value = Range("EL115")
+Sheets("Kalamein Shop").Range("W50").Value = Range("EM115")
+Sheets("Assembly").Range("W50").Value = Range("FE115")
+Sheets("Assembly").Range("W51").Value = Range("FE116")
+Sheets("Prehang").Range("W50").Value = Range("FS115")
+Sheets("Prehang").Range("W51").Value = Range("FS116")
+
+'72
+Sheets("Kalamein Shop").Range("V52").Value = Range("EL117")
+Sheets("Kalamein Shop").Range("W52").Value = Range("EM117")
+Sheets("Assembly").Range("W52").Value = Range("FE117")
+Sheets("Assembly").Range("W53").Value = Range("FE118")
+Sheets("Prehang").Range("W52").Value = Range("FS117")
+Sheets("Prehang").Range("W53").Value = Range("FS118")
+
+'73
+Sheets("Kalamein Shop").Range("V54").Value = Range("EL119")
+Sheets("Kalamein Shop").Range("W54").Value = Range("EM119")
+Sheets("Assembly").Range("W54").Value = Range("FE119")
+Sheets("Assembly").Range("W55").Value = Range("FE120")
+Sheets("Prehang").Range("W54").Value = Range("FS119")
+Sheets("Prehang").Range("W55").Value = Range("FS120")
+
+'74
+Sheets("Kalamein Shop").Range("V56").Value = Range("EL121")
+Sheets("Kalamein Shop").Range("W56").Value = Range("EM121")
+Sheets("Assembly").Range("W56").Value = Range("FE121")
+Sheets("Assembly").Range("W57").Value = Range("FE122")
+Sheets("Prehang").Range("W56").Value = Range("FS121")
+Sheets("Prehang").Range("W57").Value = Range("FS122")
+
+'75
+Sheets("Kalamein Shop").Range("V58").Value = Range("EL123")
+Sheets("Kalamein Shop").Range("W58").Value = Range("EM123")
+Sheets("Assembly").Range("W58").Value = Range("FE123")
+Sheets("Assembly").Range("W59").Value = Range("FE124")
+Sheets("Prehang").Range("W58").Value = Range("FS123")
+Sheets("Prehang").Range("W59").Value = Range("FS124")
+
+End Sub
+Sub KeepWork1002()
+
+'76
+Sheets("Kalamein Shop").Range("AC10").Value = Range("EO75")
+Sheets("Kalamein Shop").Range("AD10").Value = Range("EP75")
+Sheets("Assembly").Range("AD10").Value = Range("FG75")
+Sheets("Assembly").Range("AD11").Value = Range("FG76")
+Sheets("Prehang").Range("AD10").Value = Range("FU75")
+Sheets("Prehang").Range("AD11").Value = Range("FU76")
+
+'77
+Sheets("Kalamein Shop").Range("AC12").Value = Range("EO77")
+Sheets("Kalamein Shop").Range("AD12").Value = Range("EP77")
+Sheets("Assembly").Range("AD12").Value = Range("FG77")
+Sheets("Assembly").Range("AD13").Value = Range("FG78")
+Sheets("Prehang").Range("AD12").Value = Range("FU77")
+Sheets("Prehang").Range("AD13").Value = Range("FU78")
+
+'78
+Sheets("Kalamein Shop").Range("AC14").Value = Range("EO79")
+Sheets("Kalamein Shop").Range("AD14").Value = Range("EP79")
+Sheets("Assembly").Range("AD14").Value = Range("FG79")
+Sheets("Assembly").Range("AD15").Value = Range("FG80")
+Sheets("Prehang").Range("AD14").Value = Range("FU79")
+Sheets("Prehang").Range("AD15").Value = Range("FU80")
+
+'79
+Sheets("Kalamein Shop").Range("AC16").Value = Range("EO81")
+Sheets("Kalamein Shop").Range("AD16").Value = Range("EP81")
+Sheets("Assembly").Range("AD16").Value = Range("FG81")
+Sheets("Assembly").Range("AD17").Value = Range("FG82")
+Sheets("Prehang").Range("AD16").Value = Range("FU81")
+Sheets("Prehang").Range("AD17").Value = Range("FU82")
+
+'80
+Sheets("Kalamein Shop").Range("AC18").Value = Range("EO83")
+Sheets("Kalamein Shop").Range("AD18").Value = Range("EP83")
+Sheets("Assembly").Range("AD18").Value = Range("FG83")
+Sheets("Assembly").Range("AD19").Value = Range("FG84")
+Sheets("Prehang").Range("AD18").Value = Range("FU83")
+Sheets("Prehang").Range("AD19").Value = Range("FU84")
+
+'81
+Sheets("Kalamein Shop").Range("AC20").Value = Range("EO85")
+Sheets("Kalamein Shop").Range("AD20").Value = Range("EP85")
+Sheets("Assembly").Range("AD20").Value = Range("FG85")
+Sheets("Assembly").Range("AD21").Value = Range("FG86")
+Sheets("Prehang").Range("AD20").Value = Range("FU85")
+Sheets("Prehang").Range("AD21").Value = Range("FU86")
+
+'82
+Sheets("Kalamein Shop").Range("AC22").Value = Range("EO87")
+Sheets("Kalamein Shop").Range("AD22").Value = Range("EP87")
+Sheets("Assembly").Range("AD22").Value = Range("FG87")
+Sheets("Assembly").Range("AD23").Value = Range("FG88")
+Sheets("Prehang").Range("AD22").Value = Range("FU87")
+Sheets("Prehang").Range("AD23").Value = Range("FU88")
+
+'83
+Sheets("Kalamein Shop").Range("AC24").Value = Range("EO89")
+Sheets("Kalamein Shop").Range("AD24").Value = Range("EP89")
+Sheets("Assembly").Range("AD24").Value = Range("FG89")
+Sheets("Assembly").Range("AD25").Value = Range("FG90")
+Sheets("Prehang").Range("AD24").Value = Range("FU89")
+Sheets("Prehang").Range("AD25").Value = Range("FU90")
+
+'84
+Sheets("Kalamein Shop").Range("AC26").Value = Range("EO91")
+Sheets("Kalamein Shop").Range("AD26").Value = Range("EP91")
+Sheets("Assembly").Range("AD26").Value = Range("FG91")
+Sheets("Assembly").Range("AD27").Value = Range("FG92")
+Sheets("Prehang").Range("AD26").Value = Range("FU91")
+Sheets("Prehang").Range("AD27").Value = Range("FU92")
+
+'85
+Sheets("Kalamein Shop").Range("AC28").Value = Range("EO93")
+Sheets("Kalamein Shop").Range("AD28").Value = Range("EP93")
+Sheets("Assembly").Range("AD28").Value = Range("FG93")
+Sheets("Assembly").Range("AD29").Value = Range("FG94")
+Sheets("Prehang").Range("AD28").Value = Range("FU93")
+Sheets("Prehang").Range("AD29").Value = Range("FU94")
+
+'86
+Sheets("Kalamein Shop").Range("AC30").Value = Range("EO95")
+Sheets("Kalamein Shop").Range("AD30").Value = Range("EP95")
+Sheets("Assembly").Range("AD30").Value = Range("FG95")
+Sheets("Assembly").Range("AD31").Value = Range("FG96")
+Sheets("Prehang").Range("AD30").Value = Range("FU95")
+Sheets("Prehang").Range("AD31").Value = Range("FU96")
+
+'87
+Sheets("Kalamein Shop").Range("AC32").Value = Range("EO97")
+Sheets("Kalamein Shop").Range("AD32").Value = Range("EP97")
+Sheets("Assembly").Range("AD32").Value = Range("FG97")
+Sheets("Assembly").Range("AD33").Value = Range("FG98")
+Sheets("Prehang").Range("AD32").Value = Range("FU97")
+Sheets("Prehang").Range("AD33").Value = Range("FU98")
+
+'88
+Sheets("Kalamein Shop").Range("AC34").Value = Range("EO99")
+Sheets("Kalamein Shop").Range("AD34").Value = Range("EP99")
+Sheets("Assembly").Range("AD34").Value = Range("FG99")
+Sheets("Assembly").Range("AD35").Value = Range("FG100")
+Sheets("Prehang").Range("AD34").Value = Range("FU99")
+Sheets("Prehang").Range("AD35").Value = Range("FU100")
+
+'89
+Sheets("Kalamein Shop").Range("AC36").Value = Range("EO101")
+Sheets("Kalamein Shop").Range("AD36").Value = Range("EP101")
+Sheets("Assembly").Range("AD36").Value = Range("FG101")
+Sheets("Assembly").Range("AD37").Value = Range("FG102")
+Sheets("Prehang").Range("AD36").Value = Range("FU101")
+Sheets("Prehang").Range("AD37").Value = Range("FU102")
+
+'90
+Sheets("Kalamein Shop").Range("AC38").Value = Range("EO103")
+Sheets("Kalamein Shop").Range("AD38").Value = Range("EP103")
+Sheets("Assembly").Range("AD38").Value = Range("FG103")
+Sheets("Assembly").Range("AD39").Value = Range("FG104")
+Sheets("Prehang").Range("AD38").Value = Range("FU103")
+Sheets("Prehang").Range("AD39").Value = Range("FU104")
+
+'91
+Sheets("Kalamein Shop").Range("AC40").Value = Range("EO105")
+Sheets("Kalamein Shop").Range("AD40").Value = Range("EP105")
+Sheets("Assembly").Range("AD40").Value = Range("FG105")
+Sheets("Assembly").Range("AD41").Value = Range("FG106")
+Sheets("Prehang").Range("AD40").Value = Range("FU105")
+Sheets("Prehang").Range("AD41").Value = Range("FU106")
+
+'92
+Sheets("Kalamein Shop").Range("AC42").Value = Range("EO107")
+Sheets("Kalamein Shop").Range("AD42").Value = Range("EP107")
+Sheets("Assembly").Range("AD42").Value = Range("FG107")
+Sheets("Assembly").Range("AD43").Value = Range("FG108")
+Sheets("Prehang").Range("AD42").Value = Range("FU107")
+Sheets("Prehang").Range("AD43").Value = Range("FU108")
+
+'93
+Sheets("Kalamein Shop").Range("AC44").Value = Range("EO109")
+Sheets("Kalamein Shop").Range("AD44").Value = Range("EP109")
+Sheets("Assembly").Range("AD44").Value = Range("FG109")
+Sheets("Assembly").Range("AD45").Value = Range("FG110")
+Sheets("Prehang").Range("AD44").Value = Range("FU109")
+Sheets("Prehang").Range("AD45").Value = Range("FU110")
+
+'94
+Sheets("Kalamein Shop").Range("AC46").Value = Range("EO111")
+Sheets("Kalamein Shop").Range("AD46").Value = Range("EP111")
+Sheets("Assembly").Range("AD46").Value = Range("FG111")
+Sheets("Assembly").Range("AD47").Value = Range("FG112")
+Sheets("Prehang").Range("AD46").Value = Range("FU111")
+Sheets("Prehang").Range("AD47").Value = Range("FU112")
+
+'95
+Sheets("Kalamein Shop").Range("AC48").Value = Range("EO113")
+Sheets("Kalamein Shop").Range("AD48").Value = Range("EP113")
+Sheets("Assembly").Range("AD48").Value = Range("FG113")
+Sheets("Assembly").Range("AD49").Value = Range("FG114")
+Sheets("Prehang").Range("AD48").Value = Range("FU113")
+Sheets("Prehang").Range("AD49").Value = Range("FU114")
+
+'96
+Sheets("Kalamein Shop").Range("AC50").Value = Range("EO115")
+Sheets("Kalamein Shop").Range("AD50").Value = Range("EP115")
+Sheets("Assembly").Range("AD50").Value = Range("FG115")
+Sheets("Assembly").Range("AD51").Value = Range("FG116")
+Sheets("Prehang").Range("AD50").Value = Range("FU115")
+Sheets("Prehang").Range("AD51").Value = Range("FU116")
+
+'97
+Sheets("Kalamein Shop").Range("AC52").Value = Range("EO117")
+Sheets("Kalamein Shop").Range("AD52").Value = Range("EP117")
+Sheets("Assembly").Range("AD52").Value = Range("FG117")
+Sheets("Assembly").Range("AD53").Value = Range("FG118")
+Sheets("Prehang").Range("AD52").Value = Range("FU117")
+Sheets("Prehang").Range("AD53").Value = Range("FU118")
+
+'98
+Sheets("Kalamein Shop").Range("AC54").Value = Range("EO119")
+Sheets("Kalamein Shop").Range("AD54").Value = Range("EP119")
+Sheets("Assembly").Range("AD54").Value = Range("FG119")
+Sheets("Assembly").Range("AD55").Value = Range("FG120")
+Sheets("Prehang").Range("AD54").Value = Range("FU119")
+Sheets("Prehang").Range("AD55").Value = Range("FU120")
+
+'99
+Sheets("Kalamein Shop").Range("AC56").Value = Range("EO121")
+Sheets("Kalamein Shop").Range("AD56").Value = Range("EP121")
+Sheets("Assembly").Range("AD56").Value = Range("FG121")
+Sheets("Assembly").Range("AD57").Value = Range("FG122")
+Sheets("Prehang").Range("AD56").Value = Range("FU121")
+Sheets("Prehang").Range("AD57").Value = Range("FU122")
+
+'100
+Sheets("Kalamein Shop").Range("AC58").Value = Range("EO123")
+Sheets("Kalamein Shop").Range("AD58").Value = Range("EP123")
+Sheets("Assembly").Range("AD58").Value = Range("FG123")
+Sheets("Assembly").Range("AD59").Value = Range("FG124")
+Sheets("Prehang").Range("AD58").Value = Range("FU123")
+Sheets("Prehang").Range("AD59").Value = Range("FU124")
+
+End Sub
+Sub KeepWork1252()
+
+'101
+Sheets("Kalamein Shop").Range("AJ10").Value = Range("ER75")
+Sheets("Kalamein Shop").Range("AK10").Value = Range("ES75")
+Sheets("Assembly").Range("AK10").Value = Range("FI75")
+Sheets("Assembly").Range("AK11").Value = Range("FI76")
+Sheets("Prehang").Range("AK10").Value = Range("FW75")
+Sheets("Prehang").Range("AK11").Value = Range("FW76")
+
+'102
+Sheets("Kalamein Shop").Range("AJ12").Value = Range("ER77")
+Sheets("Kalamein Shop").Range("AK12").Value = Range("ES77")
+Sheets("Assembly").Range("AK12").Value = Range("FI77")
+Sheets("Assembly").Range("AK13").Value = Range("FI78")
+Sheets("Prehang").Range("AK12").Value = Range("FW77")
+Sheets("Prehang").Range("AK13").Value = Range("FW78")
+
+'103
+Sheets("Kalamein Shop").Range("AJ14").Value = Range("ER79")
+Sheets("Kalamein Shop").Range("AK14").Value = Range("ES79")
+Sheets("Assembly").Range("AK14").Value = Range("FI79")
+Sheets("Assembly").Range("AK15").Value = Range("FI80")
+Sheets("Prehang").Range("AK14").Value = Range("FW79")
+Sheets("Prehang").Range("AK15").Value = Range("FW80")
+
+'104
+Sheets("Kalamein Shop").Range("AJ16").Value = Range("ER81")
+Sheets("Kalamein Shop").Range("AK16").Value = Range("ES81")
+Sheets("Assembly").Range("AK16").Value = Range("FI81")
+Sheets("Assembly").Range("AK17").Value = Range("FI82")
+Sheets("Prehang").Range("AK16").Value = Range("FW81")
+Sheets("Prehang").Range("AK17").Value = Range("FW82")
+
+'105
+Sheets("Kalamein Shop").Range("AJ18").Value = Range("ER83")
+Sheets("Kalamein Shop").Range("AK18").Value = Range("ES83")
+Sheets("Assembly").Range("AK18").Value = Range("FI83")
+Sheets("Assembly").Range("AK19").Value = Range("FI84")
+Sheets("Prehang").Range("AK18").Value = Range("FW83")
+Sheets("Prehang").Range("AK19").Value = Range("FW84")
+
+'106
+Sheets("Kalamein Shop").Range("AJ20").Value = Range("ER85")
+Sheets("Kalamein Shop").Range("AK20").Value = Range("ES85")
+Sheets("Assembly").Range("AK20").Value = Range("FI85")
+Sheets("Assembly").Range("AK21").Value = Range("FI86")
+Sheets("Prehang").Range("AK20").Value = Range("FW85")
+Sheets("Prehang").Range("AK21").Value = Range("FW86")
+
+'107
+Sheets("Kalamein Shop").Range("AJ22").Value = Range("ER87")
+Sheets("Kalamein Shop").Range("AK22").Value = Range("ES87")
+Sheets("Assembly").Range("AK22").Value = Range("FI87")
+Sheets("Assembly").Range("AK23").Value = Range("FI88")
+Sheets("Prehang").Range("AK22").Value = Range("FW87")
+Sheets("Prehang").Range("AK23").Value = Range("FW88")
+
+'108
+Sheets("Kalamein Shop").Range("AJ24").Value = Range("ER89")
+Sheets("Kalamein Shop").Range("AK24").Value = Range("ES89")
+Sheets("Assembly").Range("AK24").Value = Range("FI89")
+Sheets("Assembly").Range("AK25").Value = Range("FI90")
+Sheets("Prehang").Range("AK24").Value = Range("FW89")
+Sheets("Prehang").Range("AK25").Value = Range("FW90")
+
+'109
+Sheets("Kalamein Shop").Range("AJ26").Value = Range("ER91")
+Sheets("Kalamein Shop").Range("AK26").Value = Range("ES91")
+Sheets("Assembly").Range("AK26").Value = Range("FI91")
+Sheets("Assembly").Range("AK27").Value = Range("FI92")
+Sheets("Prehang").Range("AK26").Value = Range("FW91")
+Sheets("Prehang").Range("AK27").Value = Range("FW92")
+
+'110
+Sheets("Kalamein Shop").Range("AJ28").Value = Range("ER93")
+Sheets("Kalamein Shop").Range("AK28").Value = Range("ES93")
+Sheets("Assembly").Range("AK28").Value = Range("FI93")
+Sheets("Assembly").Range("AK29").Value = Range("FI94")
+Sheets("Prehang").Range("AK28").Value = Range("FW93")
+Sheets("Prehang").Range("AK29").Value = Range("FW94")
+
+'111
+Sheets("Kalamein Shop").Range("AJ30").Value = Range("ER95")
+Sheets("Kalamein Shop").Range("AK30").Value = Range("ES95")
+Sheets("Assembly").Range("AK30").Value = Range("FI95")
+Sheets("Assembly").Range("AK31").Value = Range("FI96")
+Sheets("Prehang").Range("AK30").Value = Range("FW95")
+Sheets("Prehang").Range("AK31").Value = Range("FW96")
+
+'112
+Sheets("Kalamein Shop").Range("AJ32").Value = Range("ER97")
+Sheets("Kalamein Shop").Range("AK32").Value = Range("ES97")
+Sheets("Assembly").Range("AK32").Value = Range("FI97")
+Sheets("Assembly").Range("AK33").Value = Range("FI98")
+Sheets("Prehang").Range("AK32").Value = Range("FW97")
+Sheets("Prehang").Range("AK33").Value = Range("FW98")
+
+'113
+Sheets("Kalamein Shop").Range("AJ34").Value = Range("ER99")
+Sheets("Kalamein Shop").Range("AK34").Value = Range("ES99")
+Sheets("Assembly").Range("AK34").Value = Range("FI99")
+Sheets("Assembly").Range("AK35").Value = Range("FI100")
+Sheets("Prehang").Range("AK34").Value = Range("FW99")
+Sheets("Prehang").Range("AK35").Value = Range("FW100")
+
+'114
+Sheets("Kalamein Shop").Range("AJ36").Value = Range("ER101")
+Sheets("Kalamein Shop").Range("AK36").Value = Range("ES101")
+Sheets("Assembly").Range("AK36").Value = Range("FI101")
+Sheets("Assembly").Range("AK37").Value = Range("FI102")
+Sheets("Prehang").Range("AK36").Value = Range("FW101")
+Sheets("Prehang").Range("AK37").Value = Range("FW102")
+
+'115
+Sheets("Kalamein Shop").Range("AJ38").Value = Range("ER103")
+Sheets("Kalamein Shop").Range("AK38").Value = Range("ES103")
+Sheets("Assembly").Range("AK38").Value = Range("FI103")
+Sheets("Assembly").Range("AK39").Value = Range("FI104")
+Sheets("Prehang").Range("AK38").Value = Range("FW103")
+Sheets("Prehang").Range("AK39").Value = Range("FW104")
+
+'116
+Sheets("Kalamein Shop").Range("AJ40").Value = Range("ER105")
+Sheets("Kalamein Shop").Range("AK40").Value = Range("ES105")
+Sheets("Assembly").Range("AK40").Value = Range("FI105")
+Sheets("Assembly").Range("AK41").Value = Range("FI106")
+Sheets("Prehang").Range("AK40").Value = Range("FW105")
+Sheets("Prehang").Range("AK41").Value = Range("FW106")
+
+'117
+Sheets("Kalamein Shop").Range("AJ42").Value = Range("ER107")
+Sheets("Kalamein Shop").Range("AK42").Value = Range("ES107")
+Sheets("Assembly").Range("AK42").Value = Range("FI107")
+Sheets("Assembly").Range("AK43").Value = Range("FI108")
+Sheets("Prehang").Range("AK42").Value = Range("FW107")
+Sheets("Prehang").Range("AK43").Value = Range("FW108")
+
+'118
+Sheets("Kalamein Shop").Range("AJ44").Value = Range("ER109")
+Sheets("Kalamein Shop").Range("AK44").Value = Range("ES109")
+Sheets("Assembly").Range("AK44").Value = Range("FI109")
+Sheets("Assembly").Range("AK45").Value = Range("FI110")
+Sheets("Prehang").Range("AK44").Value = Range("FW109")
+Sheets("Prehang").Range("AK45").Value = Range("FW110")
+
+'119
+Sheets("Kalamein Shop").Range("AJ46").Value = Range("ER111")
+Sheets("Kalamein Shop").Range("AK46").Value = Range("ES111")
+Sheets("Assembly").Range("AK46").Value = Range("FI111")
+Sheets("Assembly").Range("AK47").Value = Range("FI112")
+Sheets("Prehang").Range("AK46").Value = Range("FW111")
+Sheets("Prehang").Range("AK47").Value = Range("FW112")
+
+'120
+Sheets("Kalamein Shop").Range("AJ48").Value = Range("ER113")
+Sheets("Kalamein Shop").Range("AK48").Value = Range("ES113")
+Sheets("Assembly").Range("AK48").Value = Range("FI113")
+Sheets("Assembly").Range("AK49").Value = Range("FI114")
+Sheets("Prehang").Range("AK48").Value = Range("FW113")
+Sheets("Prehang").Range("AK49").Value = Range("FW114")
+
+'121
+Sheets("Kalamein Shop").Range("AJ50").Value = Range("ER115")
+Sheets("Kalamein Shop").Range("AK50").Value = Range("ES115")
+Sheets("Assembly").Range("AK50").Value = Range("FI115")
+Sheets("Assembly").Range("AK51").Value = Range("FI116")
+Sheets("Prehang").Range("AK50").Value = Range("FW115")
+Sheets("Prehang").Range("AK51").Value = Range("FW116")
+
+'122
+Sheets("Kalamein Shop").Range("AJ52").Value = Range("ER117")
+Sheets("Kalamein Shop").Range("AK52").Value = Range("ES117")
+Sheets("Assembly").Range("AK52").Value = Range("FI117")
+Sheets("Assembly").Range("AK53").Value = Range("FI118")
+Sheets("Prehang").Range("AK52").Value = Range("FW117")
+Sheets("Prehang").Range("AK53").Value = Range("FW118")
+
+'123
+Sheets("Kalamein Shop").Range("AJ54").Value = Range("ER119")
+Sheets("Kalamein Shop").Range("AK54").Value = Range("ES119")
+Sheets("Assembly").Range("AK54").Value = Range("FI119")
+Sheets("Assembly").Range("AK55").Value = Range("FI120")
+Sheets("Prehang").Range("AK54").Value = Range("FW119")
+Sheets("Prehang").Range("AK55").Value = Range("FW120")
+
+'124
+Sheets("Kalamein Shop").Range("AJ56").Value = Range("ER121")
+Sheets("Kalamein Shop").Range("AK56").Value = Range("ES121")
+Sheets("Assembly").Range("AK56").Value = Range("FI121")
+Sheets("Assembly").Range("AK57").Value = Range("FI122")
+Sheets("Prehang").Range("AK56").Value = Range("FW121")
+Sheets("Prehang").Range("AK57").Value = Range("FW122")
+
+'125
+Sheets("Kalamein Shop").Range("AJ58").Value = Range("ER123")
+Sheets("Kalamein Shop").Range("AK58").Value = Range("ES123")
+Sheets("Assembly").Range("AK58").Value = Range("FI123")
+Sheets("Assembly").Range("AK59").Value = Range("FI124")
+Sheets("Prehang").Range("AK58").Value = Range("FW123")
+Sheets("Prehang").Range("AK59").Value = Range("FW124")
+
+End Sub
+Sub KeepWork1502()
+
+'126
+Sheets("Kalamein Shop").Range("AQ10").Value = Range("EU75")
+Sheets("Kalamein Shop").Range("AR10").Value = Range("EV75")
+Sheets("Assembly").Range("AR10").Value = Range("FK75")
+Sheets("Assembly").Range("AR11").Value = Range("FK76")
+Sheets("Prehang").Range("AR10").Value = Range("FY75")
+Sheets("Prehang").Range("AR11").Value = Range("FY76")
+
+'127
+Sheets("Kalamein Shop").Range("AQ12").Value = Range("EU77")
+Sheets("Kalamein Shop").Range("AR12").Value = Range("EV77")
+Sheets("Assembly").Range("AR12").Value = Range("FK77")
+Sheets("Assembly").Range("AR13").Value = Range("FK78")
+Sheets("Prehang").Range("AR12").Value = Range("FY77")
+Sheets("Prehang").Range("AR13").Value = Range("FY78")
+
+'128
+Sheets("Kalamein Shop").Range("AQ14").Value = Range("EU79")
+Sheets("Kalamein Shop").Range("AR14").Value = Range("EV79")
+Sheets("Assembly").Range("AR14").Value = Range("FK79")
+Sheets("Assembly").Range("AR15").Value = Range("FK80")
+Sheets("Prehang").Range("AR14").Value = Range("FY79")
+Sheets("Prehang").Range("AR15").Value = Range("FY80")
+
+'129
+Sheets("Kalamein Shop").Range("AQ16").Value = Range("EU81")
+Sheets("Kalamein Shop").Range("AR16").Value = Range("EV81")
+Sheets("Assembly").Range("AR16").Value = Range("FK81")
+Sheets("Assembly").Range("AR17").Value = Range("FK82")
+Sheets("Prehang").Range("AR16").Value = Range("FY81")
+Sheets("Prehang").Range("AR17").Value = Range("FY82")
+
+'130
+Sheets("Kalamein Shop").Range("AQ18").Value = Range("EU83")
+Sheets("Kalamein Shop").Range("AR18").Value = Range("EV83")
+Sheets("Assembly").Range("AR18").Value = Range("FK83")
+Sheets("Assembly").Range("AR19").Value = Range("FK84")
+Sheets("Prehang").Range("AR18").Value = Range("FY83")
+Sheets("Prehang").Range("AR19").Value = Range("FY84")
+
+'131
+Sheets("Kalamein Shop").Range("AQ20").Value = Range("EU85")
+Sheets("Kalamein Shop").Range("AR20").Value = Range("EV85")
+Sheets("Assembly").Range("AR20").Value = Range("FK85")
+Sheets("Assembly").Range("AR21").Value = Range("FK86")
+Sheets("Prehang").Range("AR20").Value = Range("FY85")
+Sheets("Prehang").Range("AR21").Value = Range("FY86")
+
+'132
+Sheets("Kalamein Shop").Range("AQ22").Value = Range("EU87")
+Sheets("Kalamein Shop").Range("AR22").Value = Range("EV87")
+Sheets("Assembly").Range("AR22").Value = Range("FK87")
+Sheets("Assembly").Range("AR23").Value = Range("FK88")
+Sheets("Prehang").Range("AR22").Value = Range("FY87")
+Sheets("Prehang").Range("AR23").Value = Range("FY88")
+
+'133
+Sheets("Kalamein Shop").Range("AQ24").Value = Range("EU89")
+Sheets("Kalamein Shop").Range("AR24").Value = Range("EV89")
+Sheets("Assembly").Range("AR24").Value = Range("FK89")
+Sheets("Assembly").Range("AR25").Value = Range("FK90")
+Sheets("Prehang").Range("AR24").Value = Range("FY89")
+Sheets("Prehang").Range("AR25").Value = Range("FY90")
+
+'134
+Sheets("Kalamein Shop").Range("AQ26").Value = Range("EU91")
+Sheets("Kalamein Shop").Range("AR26").Value = Range("EV91")
+Sheets("Assembly").Range("AR26").Value = Range("FK91")
+Sheets("Assembly").Range("AR27").Value = Range("FK92")
+Sheets("Prehang").Range("AR26").Value = Range("FY91")
+Sheets("Prehang").Range("AR27").Value = Range("FY92")
+
+'135
+Sheets("Kalamein Shop").Range("AQ28").Value = Range("EU93")
+Sheets("Kalamein Shop").Range("AR28").Value = Range("EV93")
+Sheets("Assembly").Range("AR28").Value = Range("FK93")
+Sheets("Assembly").Range("AR29").Value = Range("FK94")
+Sheets("Prehang").Range("AR28").Value = Range("FY93")
+Sheets("Prehang").Range("AR29").Value = Range("FY94")
+
+'136
+Sheets("Kalamein Shop").Range("AQ30").Value = Range("EU95")
+Sheets("Kalamein Shop").Range("AR30").Value = Range("EV95")
+Sheets("Assembly").Range("AR30").Value = Range("FK95")
+Sheets("Assembly").Range("AR31").Value = Range("FK96")
+Sheets("Prehang").Range("AR30").Value = Range("FY95")
+Sheets("Prehang").Range("AR31").Value = Range("FY96")
+
+'137
+Sheets("Kalamein Shop").Range("AQ32").Value = Range("EU97")
+Sheets("Kalamein Shop").Range("AR32").Value = Range("EV97")
+Sheets("Assembly").Range("AR32").Value = Range("FK97")
+Sheets("Assembly").Range("AR33").Value = Range("FK98")
+Sheets("Prehang").Range("AR32").Value = Range("FY97")
+Sheets("Prehang").Range("AR33").Value = Range("FY98")
+
+'138
+Sheets("Kalamein Shop").Range("AQ34").Value = Range("EU99")
+Sheets("Kalamein Shop").Range("AR34").Value = Range("EV99")
+Sheets("Assembly").Range("AR34").Value = Range("FK99")
+Sheets("Assembly").Range("AR35").Value = Range("FK100")
+Sheets("Prehang").Range("AR34").Value = Range("FY99")
+Sheets("Prehang").Range("AR35").Value = Range("FY100")
+
+'139
+Sheets("Kalamein Shop").Range("AQ36").Value = Range("EU101")
+Sheets("Kalamein Shop").Range("AR36").Value = Range("EV101")
+Sheets("Assembly").Range("AR36").Value = Range("FK101")
+Sheets("Assembly").Range("AR37").Value = Range("FK102")
+Sheets("Prehang").Range("AR36").Value = Range("FY101")
+Sheets("Prehang").Range("AR37").Value = Range("FY102")
+
+'140
+Sheets("Kalamein Shop").Range("AQ38").Value = Range("EU103")
+Sheets("Kalamein Shop").Range("AR38").Value = Range("EV103")
+Sheets("Assembly").Range("AR38").Value = Range("FK103")
+Sheets("Assembly").Range("AR39").Value = Range("FK104")
+Sheets("Prehang").Range("AR38").Value = Range("FY103")
+Sheets("Prehang").Range("AR39").Value = Range("FY104")
+
+'141
+Sheets("Kalamein Shop").Range("AQ40").Value = Range("EU105")
+Sheets("Kalamein Shop").Range("AR40").Value = Range("EV105")
+Sheets("Assembly").Range("AR40").Value = Range("FK105")
+Sheets("Assembly").Range("AR41").Value = Range("FK106")
+Sheets("Prehang").Range("AR40").Value = Range("FY105")
+Sheets("Prehang").Range("AR41").Value = Range("FY106")
+
+'142
+Sheets("Kalamein Shop").Range("AQ42").Value = Range("EU107")
+Sheets("Kalamein Shop").Range("AR42").Value = Range("EV107")
+Sheets("Assembly").Range("AR42").Value = Range("FK107")
+Sheets("Assembly").Range("AR43").Value = Range("FK108")
+Sheets("Prehang").Range("AR42").Value = Range("FY107")
+Sheets("Prehang").Range("AR43").Value = Range("FY108")
+
+'143
+Sheets("Kalamein Shop").Range("AQ44").Value = Range("EU109")
+Sheets("Kalamein Shop").Range("AR44").Value = Range("EV109")
+Sheets("Assembly").Range("AR44").Value = Range("FK109")
+Sheets("Assembly").Range("AR45").Value = Range("FK110")
+Sheets("Prehang").Range("AR44").Value = Range("FY109")
+Sheets("Prehang").Range("AR45").Value = Range("FY110")
+
+'144
+Sheets("Kalamein Shop").Range("AQ46").Value = Range("EU111")
+Sheets("Kalamein Shop").Range("AR46").Value = Range("EV111")
+Sheets("Assembly").Range("AR46").Value = Range("FK111")
+Sheets("Assembly").Range("AR47").Value = Range("FK112")
+Sheets("Prehang").Range("AR46").Value = Range("FY111")
+Sheets("Prehang").Range("AR47").Value = Range("FY112")
+
+'145
+Sheets("Kalamein Shop").Range("AQ48").Value = Range("EU113")
+Sheets("Kalamein Shop").Range("AR48").Value = Range("EV113")
+Sheets("Assembly").Range("AR48").Value = Range("FK113")
+Sheets("Assembly").Range("AR49").Value = Range("FK114")
+Sheets("Prehang").Range("AR48").Value = Range("FY113")
+Sheets("Prehang").Range("AR49").Value = Range("FY114")
+
+'146
+Sheets("Kalamein Shop").Range("AQ50").Value = Range("EU115")
+Sheets("Kalamein Shop").Range("AR50").Value = Range("EV115")
+Sheets("Assembly").Range("AR50").Value = Range("FK115")
+Sheets("Assembly").Range("AR51").Value = Range("FK116")
+Sheets("Prehang").Range("AR50").Value = Range("FY115")
+Sheets("Prehang").Range("AR51").Value = Range("FY116")
+
+'147
+Sheets("Kalamein Shop").Range("AQ52").Value = Range("EU117")
+Sheets("Kalamein Shop").Range("AR52").Value = Range("EV117")
+Sheets("Assembly").Range("AR52").Value = Range("FK117")
+Sheets("Assembly").Range("AR53").Value = Range("FK118")
+Sheets("Prehang").Range("AR52").Value = Range("FY117")
+Sheets("Prehang").Range("AR53").Value = Range("FY118")
+
+'148
+Sheets("Kalamein Shop").Range("AQ54").Value = Range("EU119")
+Sheets("Kalamein Shop").Range("AR54").Value = Range("EV119")
+Sheets("Assembly").Range("AR54").Value = Range("FK119")
+Sheets("Assembly").Range("AR55").Value = Range("FK120")
+Sheets("Prehang").Range("AR54").Value = Range("FY119")
+Sheets("Prehang").Range("AR55").Value = Range("FY120")
+
+'149
+Sheets("Kalamein Shop").Range("AQ56").Value = Range("EU121")
+Sheets("Kalamein Shop").Range("AR56").Value = Range("EV121")
+Sheets("Assembly").Range("AR56").Value = Range("FK121")
+Sheets("Assembly").Range("AR57").Value = Range("FK122")
+Sheets("Prehang").Range("AR56").Value = Range("FY121")
+Sheets("Prehang").Range("AR57").Value = Range("FY122")
+
+'150
+Sheets("Kalamein Shop").Range("AQ58").Value = Range("EU123")
+Sheets("Kalamein Shop").Range("AR58").Value = Range("EV123")
+Sheets("Assembly").Range("AR58").Value = Range("FK123")
+Sheets("Assembly").Range("AR59").Value = Range("FK124")
+Sheets("Prehang").Range("AR58").Value = Range("FY123")
+Sheets("Prehang").Range("AR59").Value = Range("FY124")
+
+End Sub
